@@ -1,0 +1,280 @@
+/*
+Info: CSS for HTML Lesson 5, HTML5 Forms homework, Task 5, Laptop Choice
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator http://jigsaw.w3.org/css-validator/
+*/
+/* CLEAR BROWSER DEFAULT VALUES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	list-style-type: none;
+    text-decoration: none;
+}
+tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+/* END CLEAR BROWSER DEFAULT VALUES */
+
+/* START MAIN CSS */
+
+/* RESTORE HEADINGS VALUES */
+h1 {
+    display: block;
+    font-size: 3.1em;
+    font-weight: bold;
+    margin: 0.7em 0.1em 0.5em;
+ }
+ 
+h2 /*,
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: .83em 0;
+ }
+ 
+ h3 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)  h1*/ {
+   display: block;
+   font-size: 1.17em;
+   font-weight: bold;
+   margin: 1em 0;
+ }
+ 
+ h4 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.00em;
+   font-weight: bold;
+   margin: 1.33em 0;
+ }
+ 
+ h5 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.83em;
+   font-weight: bold;
+   margin: 1.67em 0;
+ }
+ 
+ h6 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.67em;
+   font-weight: bold;
+   margin: 2.33em 0;
+ }
+/* END RESTORE HEADINGS VALUES */
+
+/* START CSS */
+body {
+	/* For test the exact view in Mozilla. For other browsers correct main margins */
+	/*background: url(../images/laptop-choice.png) no-repeat;*/
+}
+
+.wrapper {
+    width: 780px;
+}
+
+h1 {
+    color: black;
+    display: block;
+    font-family: Tahoma;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 22px;
+    margin-top: 18px;
+}
+nav ul {
+    list-style: none;
+    margin: 10px;
+	text-align:center;
+	font-size:20px;
+}
+nav li {
+    display: inline;
+    margin-right: 5px;
+}
+nav a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2DB7F1;
+}
+#maincontent {
+    display: inline-block;
+    float: left;
+}
+#laptops {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 9px;
+    margin-top: 0;
+    vertical-align: middle;
+    width: 561px;
+}
+.laptop {
+    background-color: #ffffff;
+    border: 1px solid #d9eefa;
+    border-radius: 12px;
+    color: black;
+    float: left;
+    height: 212px;
+    margin: 0 1px 9px 8px;
+    padding: 0;
+    width: 176px;
+}
+.laptop h3 {
+    font-family: Tahoma;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 12px;
+    margin-top: 9px;
+    text-align: left;
+    vertical-align: top;
+}
+.laptop .price {
+    background-color: #2c425a;
+    border-top-left-radius: 10px;
+    color: #ffffff;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 2px;
+    margin-top: 10px;
+    padding: 8px 15px 8px 17px;
+}
+.laptop img {
+    height: 83px;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+ul.description {
+    float: left;
+    font-family: Tahoma;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-top: 0;
+    text-align: left;
+}
+#filters {
+    display: inline-block;
+    float: right;
+    width: 210px;
+}
+#filtform {
+    background-color: #f7fcff;
+    border: 1px solid #d9eefa;
+    border-radius: 0;
+    color: #2c425a;
+    font-family: Tahoma;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 10px;
+    margin-right: 7px;
+    margin-top: 4px;
+    padding-bottom: 40px;
+}
+#filtform fieldset {
+    border: 0 none;
+	margin-bottom: 0.75px;
+    margin-right: 0;
+}
+#filtform legend span {
+    display: block;
+    text-align: center;
+    width: 192px;
+}
+#filtform output {
+    float: left;
+    margin-left: 51px;
+    margin-top: 14px;
+    position: absolute;
+    text-align: right;
+    width: 100px;
+}
+#filtform legend {
+    font-family: Tahoma;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 11px;
+    position: absolute;
+}
+#filtform input[type="range"] {
+    margin-left: 3px;
+    margin-top: 3px;
+    width: 185px;
+}
+
+.min-label {
+    float: left;
+    margin-left: 2px;
+    margin-top: 33px;
+}
+.max-label {
+    float: right;
+    margin-bottom: 0;
+    margin-right: 12px;
+    margin-top: 33px;
+}
+fieldset:last-of-type output {
+    margin-left: 33px !important;
+}
+/* END MAIN CSS */

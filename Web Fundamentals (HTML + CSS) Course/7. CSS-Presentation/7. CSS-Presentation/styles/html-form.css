@@ -1,0 +1,105 @@
+/*
+Info: CSS for HTML and CSS Lesson 7, CSS Presentation homework, Task 3, Styling a HTML Form
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator http://jigsaw.w3.org/css-validator/
+*/
+
+#wrapper {
+	font-family: Tahoma;
+}
+#payment-form {
+    margin: 0 auto;
+    display: block;
+    width: 400px;
+    height: 710px;
+    background-repeat: no-repeat;
+    background-image: url('../images/formBackground.jpg');
+    padding: 20px;
+}
+h3{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 7px;
+    margin-top: 12px;
+}
+#payment-form article:nth-of-type(1) > div,
+#payment-form article:nth-of-type(2) > div,
+#payment-form article:nth-of-type(3) > div{
+    background: rgba(255,255,255,0.3);
+    border-radius: 6px;
+    vertical-align: middle;
+    padding: 4px;
+    border: 1px solid #A9BFDB;
+    margin-bottom: 3px;
+}
+#payment-form article:nth-of-type(3) > div:first-of-type label:nth-of-type(1),
+#payment-form article:nth-of-type(3) > div:first-of-type label:nth-of-type(2),
+#payment-form article:nth-of-type(3) > div:first-of-type label:nth-of-type(3) {
+    width: 18%;
+    margin-left: 1px;
+    font-size: 13px;
+}
+#payment-form article:nth-of-type(3) > div:first-of-type label:nth-of-type(3) {
+    width: 30%;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 55%;
+    height: 27px;
+    padding-left: 6px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border: 2px solid white;
+    background-color: #98e98b;
+}
+
+input[type="radio"] {
+    margin-left: 13px;
+}
+input[placeholder]:focus {
+    color: red;
+}
+input[type="submit"] {
+    color: white;
+    text-align: center;
+    background-color: #04152f;
+    border-radius: 15px;
+    border: 0;
+    padding: 5px;
+    width: 26%;
+    font-size: 18px;
+}
+textarea {
+    width: 55%;
+    height: 110px;
+    padding: 4px;
+	border: 2px solid white;
+}
+label {
+    width: 33%;
+    display: inline-block;
+    margin-left: 7px;
+    font-size: 15px;
+    vertical-align: top;
+    margin-top: 3px;
+    opacity: 0.7;
+}
+img {
+    width: 20px;
+    height: 15px;
+}
+span {
+    display: block;
+    margin: 4px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+form > span {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 1;
+}

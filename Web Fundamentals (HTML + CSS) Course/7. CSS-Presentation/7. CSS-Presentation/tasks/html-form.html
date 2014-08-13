@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html>
+<head>
+	<meta name="description" content="Lesson 7, CSS Presentation homework, Task 3, Styling a HTML Form">
+	<meta name="keywords" content="lesson, exercise, homework, CSS Presentation, Styling a HTML Form">
+	<meta name="author" content="Removed for reasons of anonymity">
+	<meta charset="UTF-8">
+	<title>Styling a HTML Form</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/html-form.css" />
+</head>
+<body>
+	<div id="wrapper">
+        <section id="payment-form">
+            <form action="some.php" method="GET" name="userForm">
+                <article>
+                    <h3>
+                        Step 1: Your details
+                    </h3>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="First and last name"
+                               pattern="[a-zA-Zа-яА-Я]+ [a-zA-Zа-яА-Я]+" title="exact two words"/>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="example@domain.com" />
+                    </div>
+                    <div>
+                        <label for="tel">Phone</label>
+                        <input type="tel" name="phone" id="tel" placeholder="e.g. +447500000000"
+                               pattern="[+]{1}[0-9]{12}" title="enter '+' and 12 digits"/>
+                    </div>
+                </article>
+                <article>
+                    <h3>
+                        Step 2: Delivery address
+                    </h3>
+                    <div>
+                        <label for="area">Address</label>
+                        <textarea id="area"></textarea>
+                    </div>
+                    <div>
+                        <label for="Postcode">Post code</label>
+                        <input type="text" name="Postcode" id="Postcode" />
+                    </div>
+                    <div>
+                        <label for="Country">Country</label>
+                        <input type="text" name="Country" id="Country" />
+                    </div>
+                </article>
+                <article>
+                    <h3>
+                        Step 3: Card details
+                    </h3>
+                    <div>
+                        <span>Card type</span>
+                        <input type="radio" name="choise" id="n1"/>
+                        <label for="n1">
+                            <img src="../images/credit_cards/visa.png" alt="Visa" /> Visa</label>
+
+                        <input type="radio" name="choise" id="n2"/>
+                        <label for="n2">
+                            <img src="../images/credit_cards/amex.png" alt="AmEx" /> AmEx
+                        </label>
+
+                        <input type="radio" name="choise" id="n3"/>
+                        <label for="n3">
+                            <img src="../images/credit_cards/mastercard.png" alt="Mastercard"/> Mastercard
+                        </label>
+                    </div>
+                    <div>
+                        <label for="Cardnumber">Card number</label>
+                        <input type="text" name="Cardnumber" id="Cardnumber" />
+                    </div>
+                    <div>
+                        <label for="Securitycode">Security code</label>
+                        <input type="text" name="Securitycode" id="Securitycode" />
+                    </div>
+                    <div>
+                        <label for="cardname">Name on card</label>
+                        <input type="text" name="cardname" id="cardname" placeholder="exact name as on the card"/>
+                    </div>
+                </article>
+                <span>
+                    <input type="submit" value="BUY IT!"/>
+                </span>
+            </form>
+        </section>
+	</div>
+</body>
+</html>

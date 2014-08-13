@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html> <!-- This document almost was successfully checked as HTML5 in http://validator.w3.org/ /exept color and datetime fields /-->
+<html>
+<head>
+	<meta name="description" content="Lesson 5, HTML5 Forms homework, Task 4, Fakebook Register Form">
+	<meta name="keywords" content="lesson, exercise, homework, HTML5 Forms, Fakebook Register Form">
+	<meta name="author" content="Removed for reasons of anonymity">
+	<meta charset="UTF-8">
+	<title>Fakebook Register Form</title>
+	<link rel="stylesheet" type="text/css" href="../styles/fakebook-register-form.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>fakebook<span>&reg;</span></h1>
+			<h2>Registration</h2>
+			<span>It is safe and it will always be!</span>
+		</header>
+		<div id="form">
+			<form method="post">
+				<div id="leftfieldset">
+					<fieldset id="left">
+						<legend>None-Important Information</legend>
+						<input type="text" name="first-name" placeholder="First Name" class="non-important">
+						<input type="text" name="last-name" placeholder="Last Name" class="non-important">
+						<input type="email" name="email" placeholder="Your Email" class="non-important" pattern="[a-zA-Z0-9_]{3,}@[a-zA-Z0-9_]{3,}.[a-zA-Z0-9_]{2,4}">
+						<input type="tel" name="phone-number" placeholder="Phone Number" class="non-important" pattern="\+[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}\-[0-9]{2}">
+						<input type="password" name="password" placeholder="Your Password" class="non-important">
+						<input type="text" name="website" placeholder="Website" class="non-important">
+						<label for="birthday" class="label">Birthday</label>
+						<input type="datetime" id="birthday" name="birthday" value="05/09/2014 01:58 PM"> <!-- value="2014-09-05T01:58:00Z" -->
+						<div id="gender">
+							<input type="radio" name="sex" value="female" id="female"><label for="female">Female</label>
+							<input type="radio" name="sex" value="male" id="male"><label for="male">Male</label>
+							<input type="radio" name="sex" value="other" id="other" checked><label for="other" >Other</label>	
+						</div>
+					</fieldset>
+				</div>
+				<div id="rightfieldset">
+					<fieldset id="right">
+						<legend>Important Information *required</legend>
+						<select name="Country" id="country" class="important-info" required="required">
+							<option value="" selected="selected">Country</option>
+							<option value="Sofia">Sofia</option>
+							<option value="Berlin">Berlin</option>
+							<option value="London">London</option>
+							<option value="Madrid">Madrid</option>
+							<option value="Paris">Paris</option>
+							<option value="Amsterdam">Amsterdam</option>
+							<option value="Rome">Rome</option>
+						</select>
+						<input type="text" name="Village" placeholder="Village" class="important-info" required="required">
+						<input type="text" name="district" placeholder="District" class="important-info" required="required">
+						<input type="text" name="street" placeholder="Street" class="important-info" required="required">
+						<input type="text" name="number" placeholder="Nr" class="address" required="required">
+						<input type="text" name="floor" placeholder="Floor" class="address" required="required">
+						<input type="text" name="apt-numbr" placeholder="Ap Nr" class="address" required="required">
+						<label for="color" class="label">Door Color</label>
+						<input type="color" name="color" id="color" value="#FF80C0" class="three-inarow" >
+						<input type="text" name="water-meeter" placeholder="Water Meter Nr" id="water-meter" required="required" >
+						<select name="panties-size" id="panties" class="three-inarow" required="required">
+							<option value="" selected="selected">Aunt Panties' Size</option>
+							<option value="L">L</option>
+							<option value="XL">XL</option>
+							<option value="XXL">XXL</option>
+							<option value="XXXL">XXXL</option>
+							<option value="Naked">Doesn't wear any</option>
+						</select>
+						<label for="personal-info" class="label">More Personal Information</label>
+						<textarea name="personal-info" placeholder="Give Us More Information!!!" required="required"></textarea>
+					</fieldset>
+				</div>
+				<div id="buttons">
+					<input type="reset" value="Clear Form" id="clear">
+					<input type="submit" value="Register" id="submit">
+				</div>
+			</form>	
+		</div>
+	</div>
+</body>
+</html>

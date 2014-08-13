@@ -1,0 +1,58 @@
+/*
+Info: CSS for HTML and CSS Lesson 7, CSS Presentation homework, Task 2, SoftUni Hawaii Vacation
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator http://jigsaw.w3.org/css-validator/
+*/
+
+body {
+	/* For test the exact view in Chrome */
+	/*
+	background: url('../images/softuni-hawaii-vacation.png') no-repeat;
+	margin: 0;
+	*/
+}
+#wrapper{
+    height: 600px;
+    width: 900px;
+    background: 
+        url('../images/VladoKHula.png'),
+		url('../images/AlexHula.png'),
+        url('../images/NakovHula.png'),
+        url('../images/TediHula.png'),
+        url('../images/PetiaHula.png'),
+        url('../images/VladoGHula.png'),
+        url('../images/HawaiiBackground.png'),
+        radial-gradient(at 21% 21%, white 3%, #f9f8b8 8%,white 13%,#0068db 60%);
+    background-repeat: 
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat,
+        no-repeat;
+    background-position:
+		98% 93%, 
+		74% 89%, 
+		60% 79%, 
+		35% 95%, 
+		28% 85%, 
+		7% 88%,
+        top left;
+}
+h1{
+    font-family: animated, Monotype Corsiva, serif;
+    float: right;
+    color: #fdbc21;
+    font-size: 50px;
+    margin: 15px 20px;
+	text-transform: capitalize;
+	font-weight: normal;
+}
+
+@font-face {
+	/* Doesn't work in Mozilla - something with Same Origin Policy */
+    font-family: animated;
+    src: url(fonts/animated.ttf) format('truetype');
+}
+/* END MAIN CSS */
