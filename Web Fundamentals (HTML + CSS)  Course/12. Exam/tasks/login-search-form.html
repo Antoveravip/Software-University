@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html>
+<head>
+	<meta name="description" content="Exam, HTML and CSS SoftUni Exam, Task 3, Login Search Form">
+	<meta name="keywords" content="exam, HTML and CSS SoftUni Exam, Login Search Form">
+	<meta name="author" content="Petar Ivanov (Antoveravip)">
+	<meta charset="UTF-8">
+	<title>Login Search Form</title>
+	<link rel="stylesheet" type="text/css" href="../styles/login-search-form.css" />
+</head>
+<body>	
+	<div id="wrapper">
+		<form id="login">
+			<header>
+				<h1>Login</h1>
+			</header>
+			<fieldset id="inputs">
+				<div class="informs">
+				<label for="username" id="userIcon"></label>
+				<input id="username" type="text" placeholder="Please enter your email" required>
+				</div>
+				<div class="informs">
+				<label for="password" id="passwordIcon"></label>
+				<input id="password" type="password" placeholder="Password" required>
+				</div>
+				<input type="submit" id="submit" value="Submit">
+			</fieldset>
+		</form>		
+		<form id="search" method="get" action="http://www.google.com">
+		        <input type="text" class="searchInp" placeholder="Search" name="q" size="30" maxlength="120"><label for="search-button" id="searchbtn" ></label><input type="submit" value="Search" id="search-button">
+		</form>
+	</div>
+</body>
+</html>

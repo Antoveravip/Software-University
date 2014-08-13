@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html>
+<head>
+	<meta name="description" content="Lesson 5, HTML5 Forms homework, Task 1, Simple Form">
+	<meta name="keywords" content="lesson, exercise, homework, HTML5 Forms, forms">
+	<meta name="author" content="Removed for reasons of anonymity">
+	<meta charset="UTF-8">
+	<title>Simple Form</title>
+	<link rel="stylesheet" type="text/css" href="../styles/simple-form.css" />
+	<!--[if gte IE 9]>
+	  <style type="text/css">
+		.gradient {
+		   filter: none;
+		}
+		</style>
+	<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<section>
+			<h2>Enter the system</h2>
+			<p id="login-invite">It is nesessary to login in Your account in order to sign in for a course.</p>
+			<article id="new-user">
+				<form method="post">
+					<h5><span>Are you new?</span> <span>Register</span></h5>
+					<input type="text" name="new-username" placeholder="User name" autocomplete="on" required>
+					<input type="email" name="new-user-email" placeholder="Email" autocomplete="on" required>
+					<input type="password" name="new-user-password" placeholder="Password" required>
+					<input type="password" name="confimrr-password" placeholder="Confirm Password" required>
+					<input id="register-button" type="submit" value="Register" >
+				</form>	
+			</article>				  
+			<article id="registered-user">
+				<form method="post">
+					<h5>Already a student? Login</h5>
+					<input type="text" name="registered-username" placeholder="Username" autocomplete="on" required>
+					<input type="password" name="registered-user-password" placeholder="Password" required>
+					<input id="remember-ckbx" type="checkbox" name="remember-password" value="yes">
+					<label for="remember-ckbx"> Remember me?</label>
+					<input id="login-button" type="submit" value="Login">
+					<a href="#">Forgot Password</a>
+				</form>
+			</article> 
+		</section>
+	</div>
+</body>
+</html>

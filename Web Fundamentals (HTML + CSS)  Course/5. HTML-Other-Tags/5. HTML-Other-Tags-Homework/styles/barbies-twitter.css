@@ -1,0 +1,126 @@
+/*
+Info: CSS for HTML Lesson 5, HTML5 Semantic HTML, Frames, Other Tags homework, Task 6, Barbies Twitter
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator http://jigsaw.w3.org/css-validator/
+*/
+/* CLEAR BROWSER DEFAULT VALUES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+/* END CLEAR BROWSER DEFAULT VALUES */
+
+/* START MAIN CSS */
+
+/* RESTORE HEADINGS VALUES */
+h1 {
+    display: block;
+    font-size: 3.1em;
+    font-weight: bold;
+    margin: 0.7em 0.1em 0.5em;
+ }
+ 
+h2 /*,
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: .83em 0;
+ }
+ 
+ h3 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)  h1*/ {
+   display: block;
+   font-size: 1.17em;
+   font-weight: bold;
+   margin: 1em 0;
+ }
+ 
+ h4 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.00em;
+   font-weight: bold;
+   margin: 1.33em 0;
+ }
+ 
+ h5 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.83em;
+   font-weight: bold;
+   margin: 1.67em 0;
+ }
+ 
+ h6 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.67em;
+   font-weight: bold;
+   margin: 2.33em 0;
+ }
+/* END RESTORE HEADINGS VALUES */
+
+/* START CSS */
+body {
+	/* For test the exact view in Mozilla. For other browsers correct main margins */
+	background: url(../images/barbies-twitter.png) no-repeat;
+}
+/* TODO*/
+/* END MAIN CSS */

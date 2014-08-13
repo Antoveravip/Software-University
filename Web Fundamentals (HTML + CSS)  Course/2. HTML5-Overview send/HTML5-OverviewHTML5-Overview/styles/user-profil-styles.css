@@ -1,0 +1,261 @@
+/*
+Info: CSS for HTML Lesson 3, HTML5 Overview homework, Task 6, Doge Social Network
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator
+*/
+
+/* CLEAR BROWSER DEFAULT VALUES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END CLEAR BROWSER DEFAULT VALUES */
+
+/* START MAIN CSS */
+
+/* RESTORE HEADINGS VALUES */
+h1 {
+    display: block;
+    font-size: 3.1em;
+    font-weight: bold;
+    margin: 0.7em 0.1em 0.5em;
+ }
+ 
+h2 /*,
+:-moz-any(article, aside, nav, section) h1*/ {
+   /*display: block;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: .83em 0;*/
+    display: block;
+    font-size: 1.48em;
+    font-weight: bold;
+    margin: 0.8em 0 0.78em;
+ }
+ 
+ h3 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)  h1*/ {
+   display: block;
+   font-size: 1.17em;
+   font-weight: bold;
+   margin: 1em 0;
+ }
+ 
+ h4 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.00em;
+   font-weight: bold;
+   margin: 1.33em 0;
+ }
+ 
+ h5 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.83em;
+   font-weight: bold;
+   margin: 1.67em 0;
+ }
+ 
+ h6 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.67em;
+   font-weight: bold;
+   margin: 2.33em 0;
+ }
+ 
+ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	margin: 1em 0;
+	-moz-padding-start: 33px;
+}
+menu[type="context"] {
+	display: none !important;
+}
+ol {
+	display: block;
+	list-style-type: decimal;
+	margin: 1em 0;
+	-moz-padding-start: 33px;
+}
+
+li {
+	display: list-item;
+}
+
+/* nested lists have no top/bottom margins */
+
+ul  ul, ol  ul, dir  ul, menu  ul, dl ul,
+ul ol, ol ol, dir ol, menu ol, dl ol,
+ul dir, ol dir, dir dir, menu dir, dl dir,
+ul menu, ol menu, dir menu, menu menu, dl menu,
+ul dl, ol dl, dir dl, menu dl, dl dl {
+	margin-top: 0;
+	margin-bottom: 0;
+} 
+
+ /* 2 deep unordered lists use a circle */
+ol ul, ul ul, menu ul, dir ul,
+ol menu, ul menu, menu menu, dir menu,
+ol dir, ul dir, menu dir, dir  dir{
+	list-style-type: circle;
+} 
+
+ /* 3 deep (or more) unordered lists use a square */
+ol ol ul, ul ol ul, menu ol ul, dir ol ul,
+ol ul ul, ul ul ul, menu ul ul, dir ul ul,
+ol menu ul, ul menu ul, menu menu ul, dir menu ul,
+ol dir ul, ul dir ul, menu dir ul, dir dir ul,
+ol ol menu, ul ol menu, menu ol menu, dir ol menu,
+ol ul menu, ul ul menu, menu ul menu, dir ul menu,
+ol menu menu, ul menu menu, menu menu menu, dir menu menu,
+ol dir menu, ul dir menu, menu dir menu, dir dir menu,
+ol ol dir, ul ol dir, menu ol dir, dir ol dir,
+ol ul dir, ul ul dir, menu ul dir, dir ul dir,
+ol menu dir, ul menu dir, menu menu dir, dir menu dir,
+ol dir dir, ul dir dir, menu dir dir, dir dir dir {
+	list-style-type: square;
+}
+/* END RESTORE HEADINGS VALUES */
+
+/* START DOGE SOCIAL NETWORK CSS */
+body {
+	/* For test the exact view */
+	/*background: #add8e6 url(../images/tests/profile-dogs.png) no-repeat;*/
+	/*background: #add8e6 url(../images/tests/friends-dog.png) no-repeat;*/
+	/*background: #add8e6 url(../images/tests/info-dog.png) no-repeat;*/	
+	background-color:#add8e6;
+	font-family: Times New Roman, Helvetica, sans-serif;
+}
+.wrapper {
+	padding: 1.1em 0.5em;
+}
+
+/* unvisited link */
+a:link {
+	color:#589ce7;
+}     
+/* visited link */
+a:visited {
+	color:#551a8b;
+}
+h1 {
+	font-size: 2em;
+    text-decoration:none;
+	color:#000;
+    font-family:Times New Roman, Times, serif;
+	margin:0;
+}
+ul {
+    margin: 1.32em 0.02em 1.06em;
+}
+li {
+	/*display:inline;*/
+    font-size: 0.9em;
+    padding: 0.16em 0.44em 0;
+}
+#prof dt {
+	display:inline;
+	clear: both;
+}
+#prof dd {
+	display:inline;
+}
+#prof dt,
+#prof dd {
+	display: block;
+	float: left;
+}
+#prof dd {
+    font-size: 0.96em;
+    padding: 0;
+}
+#prof dt {
+    font-size: 0.94em;
+    font-weight: bold;
+    margin: 0.06em 0.18em 0.02em 0;
+    padding: 0;
+}
+dl {
+	margin:0;
+	color:#000;
+}
+hr {
+    border-bottom: 1px solid #eeeeee;
+    border-top: 1px solid #9a9a9a;
+}
+#friend {
+	font-size: 0.96em;
+    font-style: italic;
+    margin-top: 1em;
+}
+#friend dt {
+   margin: 0.08em 0;
+}
+#friend dd {
+    font-style: normal;
+    padding-left: 2.5em;
+}
+img {
+    border: 1px solid #000000;
+    margin: 0;
+}
+p {
+    display: block;
+    font-size: 0.93em;
+    font-weight: normal;
+    padding: 0.6em 0 0.5em;
+}
+/* END DOGE SOCIAL NETWORK CSS */

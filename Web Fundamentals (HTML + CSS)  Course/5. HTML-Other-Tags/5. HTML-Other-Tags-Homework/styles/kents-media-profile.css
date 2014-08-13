@@ -1,0 +1,221 @@
+/*
+Info: CSS for HTML Lesson 5, HTML5 Semantic HTML, Frames, Other Tags homework, Task 2, Kent's Media Profile
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator http://jigsaw.w3.org/css-validator/
+*/
+/* CLEAR BROWSER DEFAULT VALUES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	list-style-type: none;
+    text-decoration: none;
+}
+tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+    /*border-collapse: separate;
+    border-spacing: 2px;*/
+}
+/* END CLEAR BROWSER DEFAULT VALUES */
+
+/* START MAIN CSS */
+
+/* RESTORE HEADINGS VALUES */
+h1 {
+    display: block;
+    font-family: tahoma;
+    font-size: 120px;
+    font-weight: bold;
+ }
+ 
+h2 /*,
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: .83em 0;
+ }
+ 
+ h3 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)  h1*/ {
+   display: block;
+   font-size: 1.17em;
+   font-weight: bold;
+   margin: 1em 0;
+ }
+ 
+ h4 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.00em;
+   font-weight: bold;
+   margin: 1.33em 0;
+ }
+ 
+ h5 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.83em;
+   font-weight: bold;
+   margin: 1.67em 0;
+ }
+ 
+ h6 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.67em;
+   font-weight: bold;
+   margin: 2.33em 0;
+ }
+/* END RESTORE HEADINGS VALUES */
+
+/* START CSS */
+
+/* For test the exact view in Chrome. For other browsers correct main margins */
+body {
+	/*background: url(../images/kents-media-profile.png) no-repeat;*/
+
+}
+
+body {
+    background-color:#ffffff;
+    font-family:Tahoma;
+}
+
+.wrapper {
+	background-color:#ffc0cb;
+    border-radius: 11px;
+    margin: 10px 12px;
+    width: 1065px;
+	height:383px;
+}
+h1 {
+	font-size: 30px;
+    margin: 0;
+    padding: 25px 0 2px;
+	text-align: center;
+}
+
+section {
+    display:inline-block;
+	float: left;
+}
+
+section h2 {
+	margin-bottom:4px;
+	font-size:20px;
+	font-weight:normal;
+	margin-top: 0;
+}
+
+#user {
+    margin-left: 20px;
+    margin-top: 3px;
+}
+.complete {
+	font-size: 20px;
+	margin-bottom: 3px;
+	margin-left: 6px;
+	margin-top: 5px;
+}
+
+#audio {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 300px;
+}
+embed {
+	margin-bottom: 0px;
+	height: 150px;
+}
+#audio audio {
+	height: 32px;
+	margin: 0;
+}
+#video {
+    margin-left: 11px;
+    margin-top: 3px;
+}
+meter {
+    height: 25px;
+    margin-left: 5px;
+    width: 200px;
+	margin-top: 1px;
+}
+#video > h2 {
+    margin-bottom: 4px;
+    margin-top: 5px;
+}
+img {
+    height: 195px;
+    width: 240px;
+}
+
+figure {
+    margin: 5px 0 0 5px;
+}
+video {
+    background-color: black;
+    height: 255px;
+    width: 453px;
+}
+#large {
+    background-color:black;
+    height:150px;
+}
+
+figcaption {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+/* END MAIN CSS */

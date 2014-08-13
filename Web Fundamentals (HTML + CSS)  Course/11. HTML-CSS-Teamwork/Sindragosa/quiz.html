@@ -1,0 +1,328 @@
+<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+	<meta name="description" content="HTML5 and CSS3 Teamwork">
+	<meta name="keywords" content="lesson, teamwork, HTML5, CSS3" >
+	<meta name="author" content="Team SINDRAGOSA">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SINDRAGOSA - University of Life</title>
+	<!-- Bootstrap -->
+	 <link rel="stylesheet" type="text/css" href="quiz.css">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<base href="http://www.tropcheva.com/Sindragosa/" >
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+<script type="text/javascript">
+//<![CDATA[
+var text=new Array();
+text[0]="Сокол на Хор (Horus falcon)";
+text[1]="Kотката на Гайер Андерсън (The Gayer-Anderson Cat)";
+text[2]="1. Elephant bird egg  2. Moa egg  3. Ostrich egg  4. Mute swan egg  5.Comon guillemot egg  6. Domestic chicken egg  7. Cittle owl egg 8. Goldcrest egg";
+text[3]="Монетосечене на Мелос(The Coinage of Melos)";
+text[4]="Огледало, продържано от жена, която държи гълъб(Mirror suppored by a woman holding a dove)";
+text[5]=":P";
+text[6]="Parfume bottle, Cosmetic box, Parfume bottle, Cosmetic box";
+text[7]="Parfume bottle";
+text[8]="Саркофаг (Sarcophagus)";
+text[9]="Шест тежести за тъкане (Six loom-weights)";
+text[10]="Man's cloth";
+text[11]="Cizhou-type pillow";
+text[12]="Cizhou-type pillow";
+text[13]="Катарами за колани (Belt buckles";
+text[14]="Прасета от нефрит (Jade pigs)";
+text[15]="Гъсеница (Catterpillar): Има около 4000 мускула - човекът има около 650-850";
+text[16]="Otg2";
+text[17]="Otg3";
+text[18]="Otg1";
+text[19]="Otg2";
+text[20]="Otg3";
+text[21]="Otg1";
+text[22]="Otg2";
+text[23]="Otg3";
+text[24]="Otg1";
+text[25]="Otg2";
+text[26]="Otg3";
+text[27]="Otg1";
+text[28]="Otg2";
+text[29]="Otg3";
+text[30]="Otg1";
+text[31]="Otg2";
+text[32]="Otg3";
+text[33]="Otg1";
+text[34]="Otg2";
+text[35]="Otg3";
+text[36]="Otg1";
+text[37]="Otg2";
+text[38]="Otg2";
+
+var image= new Array();
+image[0]='1.jpg';
+image[1]='2.png';
+image[2]='3.png';
+image[3]='4.png';
+image[4]='5.png';
+image[5]='6.png';
+image[6]='7.png';
+image[7]='8.png';
+image[8]='9.png';
+image[9]='10.png';
+image[10]='11.png';
+image[11]='12.png';
+image[12]='13.png';
+image[13]='14.png';
+image[14]='15.png';
+image[15]='16.jpg';
+image[16]='17.jpg';
+image[17]='18.png';
+image[18]='19.png';
+image[19]='20.png';
+image[20]='21.png';
+image[21]='22.png';
+image[22]='23.jpg';
+image[23]='24.png';
+image[24]='25.png';
+image[25]='26.png';
+image[26]='27.jpg';
+image[27]='28.png';
+image[28]='29.png';
+image[29]='30.png';
+image[30]='31.png';
+image[31]='32.jpg';
+image[32]='33.png';
+image[33]='34.png';
+image[34]='35.png';
+image[35]='36.png';
+image[36]='37.png';
+image[37]='38.png';
+image[38]='39.png';
+var i=0;
+
+function first(){
+   if((i!==0)||(i==0)){
+       i=0;
+       document.getElementById("pictures").src = image[i];
+	   
+	   
+   }
+  }
+function previous(){
+   if(i>=1){
+      i=i-1;
+      document.getElementById("pictures").src = image[i]
+	  document.getElementById("texts").innerText = text[i]
+   }
+  }
+function next(){
+   if((i>=0)&&(i<=image.length-2)){
+      i=i+1;
+      document.getElementById("pictures").src = image[i]
+   }
+  }
+function last(){
+   if(i!=image.length){
+      i=image.length-1;
+      document.getElementById("pictures").src = image[i]
+   }
+  }
+onload=first;
+    function reply_click()
+{
+
+      <!-- alert(clicked_id);>
+   alert(text[i]);
+   }
+   
+
+//]]>
+</script>
+ <!--End of Nex/Prev-->
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="logo">
+				<a href="index.html">
+					<img alt="Sindragosa University Logo" src="images/sindragosa.png">
+				</a>
+			</div>
+			<nav class="navbar navbar-default" role="navigation">
+
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#singragosa-menu">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="singragosa-menu">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.html">Прием</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">За университета <span class="caret"></span></a>
+								<ul class="dropdown-menu multi-level" role="menu">
+									<li><a href="about-university.html">Предимства</a></li>
+									<li class="dropdown-submenu">
+										<a href="lectors.html" tabindex="-1">Преподаватели</a>
+										<ul class="dropdown-menu" role="menu">
+											<li><a tabindex="-1" href="high-league.html">Висш състав</a></li>
+											<li class="dropdown-submenu"><a href="current-lectors.html">Налични преподаватели</a>
+												<ul class="dropdown-menu">
+													<li><a href="usual-suspects.html">Основните заподозрени</a></li>
+													<li><a href="unusual-teachers.html">Необичайните учители</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="apply.html">Кандидатстване</a></li>
+								</ul>
+							</li>
+							<li><a href="educations.html" >Обучения</a></li>
+							<li><a href="sponsors.html">Спонсори</a></li>
+							<li><a href="jobs.html">Работа</a></li>
+							<li><a href="contacts.html">Контакти</a></li>	
+							<li><a href="quiz.html">Тест</a></li>
+						</ul>
+						<form class="navbar-form navbar-left search-menu" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control search rounded" placeholder="Search..." maxlength="100">
+								<button type="submit" class="btn btn-default search-button"></button>
+							</div>							
+						</form>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		<section class="container-fluid main">
+			<!--quiz start-->
+			<h2>Познайте какво е това!</h2>
+			
+			<div class="container-fluid">
+			<div  class="col-md-12" id="one">
+<button id="first" onclick="first()"> first</button>
+<button id="previous" onclick="previous()">&lt;&lt;</button> 
+<button id="next" onclick="next()">&gt;&gt;</button> 
+<button id="last" onclick="last()">last</button>
+</div>
+			 <div class="col-md-12" id="dvtwo"><img class="img-responsive" id="pictures" src="" alt=""/><button id="Answer" onClick="reply_click(this.id)" >Отговор (Answer)</button></div>
+
+
+				
+			</div>
+		</section>
+		<footer>
+			<div id="sec-footer">
+			 <section class="col-md-3">
+				<h1>Sindragosa</h1>
+				<h2>Университетът на живота</h2>
+			 </section>
+			 <section class="col-md-3">
+				<h1>Страници:</h1>
+			 	<ul class="bottom-nav">
+					<li><a href="apply.html">Прием</a></li>
+					<li><a href="about-university.html">За университета</a></li>
+					<li><a href="sponsors.html">Спонсори</a></li>
+					<li><a href="jobs.html">Работа</a></li>
+				</ul>
+			 </section>
+			 <section class="col-md-3">
+				<h1>Контакти</h1>
+				<p id="contact-info">
+					<span class="cont-descr">Име:</span>
+						<strong><a href="index.html">Sindragosa</a></strong>
+					<br>
+					<span class="cont-descr">Адрес:</span>
+					<strong>Навсякъде във вселената и дори отвъд</strong>
+					<br>
+					<span class="cont-descr">Тел:</span>
+					<strong>Ние ще ви звъннем</strong>
+					<br>
+					<span class="cont-descr">Е-майл:</span>
+					<strong>На който и да пишете ще го получим</strong>
+					<br>
+					<span class="cont-descr">Работно време:</span>
+					<strong>24 / 7</strong>
+				</p>
+			 </section>
+			 <section class="col-md-3">
+				<h1>Приятели</h1>
+					<span style="vertical-align: bottom; width: 286; height: 200;">
+						<iframe class="" width="286" height="200" frameborder="0" name="f1d536d2896d616" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" style="border: medium none; visibility: visible; width: 286px; height: 200px;" src="https://www.facebook.com/plugins/like_box.php?app_id=1442925725936458&channel=https%3A%2F%2Fs-static.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FDhmkJ2TR0QN.js%3Fversion%3D41%23cb%3Df2a75c97da1100e%26domain%3Dsoftuni.bg%26origin%3Dhttps%253A%252F%252Fsoftuni.bg%252Ffc19e2b024197e%26relation%3Dparent.parent&color_scheme=light&header=false&height=200&href=https%3A%2F%2Fwww.facebook.com%2FSoftwareUniversity&locale=en_US&sdk=joey&show_border=false&show_faces=true&stream=false&width=286">
+						</iframe>
+					</span>
+			 </section>
+			</div>
+			<div>
+			<ul>
+				<li class="author" ><a rel="author" href="https://github.com/DzIvanova/TEAM--SINDRAGOSA-" >Правото е ваше &copy;2014 by Team Sindragosa</a></li>
+				<li class="footer-info" >
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+						<img src="images/creative-commons-license.png" alt="Creative Commons License" title="Creative Commons License" width="88" height="31">
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://validator.w3.org/check?uri=http://www.tropcheva.com/Sindragosa/index.html -->
+					<a href="http://validator.w3.org/check?uri=http://www.tropcheva.com/Sindragosa/index.html">
+						<img src="images/valid-html5.png" alt="Valid HTML5!" title="Valid HTML5!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://www.css-validator.org/validator?uri=http://softuni.bg&profile=css3 
+						 http://jigsaw.w3.org/css-validator/check/referer -->
+					<a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.tropcheva.com%2FSindragosa%2Fstyles%2Fstyles.css&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en">
+						<img src="images/valid-css3.gif" alt="Valid CSS3!" title="Valid CSS3!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="author" >Следвайте ни:</li>
+				<li class="follow-us" >
+					<a href="http://www.facebook.com/#">
+						<img src="images/social_buttons/facebook.png" alt="Facebook" title="Facebook" width="31" height="31">
+					</a>
+				</li>
+				<li class="follow-us" >
+					<a href="https://plus.google.com/#">
+						<img src="images/social_buttons/google.png" alt="Google+" title="Google+" width="31" height="31" >
+					</a>
+				</li>
+				<li class="follow-us" >
+					<a href="http://www.linkedin.com/profile/#">
+						<img src="images/social_buttons/linkedIn.png" alt="LinkedIn" title="LinkedIn" width="31" height="31" >
+					</a>
+				</li>
+				<li class="follow-us" >
+					<a href="https://twitter.com/#">
+						<img src="images/social_buttons/twitter.png" alt="Twitter" title="Twitter" width="31" height="31" >
+					</a>
+				</li>
+				<li class="follow-us" >
+					<a  href="skype:#?chat">
+						<img src="images/social_buttons/skype.png" alt="Skype" title="Skype" width="31" height="31" >
+					</a>
+				</li>
+				<li class="follow-us" >
+					<a href="mailto:#">
+						<img src="images/social_buttons/email.png" alt="Email" title="Email" width="31" height="31" >
+					</a>
+				</li>
+			</ul>
+			</div>
+		</footer>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

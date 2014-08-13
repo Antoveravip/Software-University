@@ -1,0 +1,199 @@
+/*
+Info: CSS for HTML Lesson 3, HTML5 Overview homework, Task 5, Power Point Slide
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator
+*/
+/* CLEAR BROWSER DEFAULT VALUES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END CLEAR BROWSER DEFAULT VALUES */
+
+/* START MAIN CSS */
+
+/* RESTORE HEADINGS VALUES */
+h1 {
+    display: block;
+    font-size: 3.1em;
+    font-weight: bold;
+    margin: 0.7em 0.1em 0.5em;
+ }
+ 
+h2 /*,
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: .83em 0;
+ }
+ 
+ h3 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)  h1*/ {
+   display: block;
+   font-size: 1.17em;
+   font-weight: bold;
+   margin: 1em 0;
+ }
+ 
+ h4 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.00em;
+   font-weight: bold;
+   margin: 1.33em 0;
+ }
+ 
+ h5 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.83em;
+   font-weight: bold;
+   margin: 1.67em 0;
+ }
+ 
+ h6 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.67em;
+   font-weight: bold;
+   margin: 2.33em 0;
+ }
+/* END RESTORE HEADINGS VALUES */
+
+/* START POWER POINT SLIDE CSS */
+body {
+	/* For test the exact view */
+	/*background: url(../images/tests/power-point-slide.png) no-repeat;*/
+	background: url(../images/slider-background.jpg) no-repeat;
+	font-family: Calibri, Helvetica, sans-serif;
+}
+
+img {
+    float: right;
+    height: auto;
+    margin: 1.6em 0.4em 0 0;
+    width: 15em;
+}
+
+nav h1 {
+    color: #F3CD60;
+    display: inline-block;
+    font-size: 3.37em;
+    font-weight: bold;
+    margin: 0.55em 0 0 0.61em;
+}
+
+article h2::before {
+    content: url("../images/sqare.png");
+    float: left;
+    margin: -0.2em 0.32em 0 0.05em;
+}
+
+article h2 {
+    color: #FFFFFF;
+    font-size: 3em;
+    font-weight: normal;
+    margin: 0.23em 0.22em 0 0;
+    padding: 0 0 0.24em;
+}
+
+article {
+   margin: 0 3em 0.8em;
+}
+
+h2 .htag {
+	color: #f3cd60;
+	font-weight: bold;
+    padding: 0 0.2em 0 0.1em;
+}
+
+article div {
+    background: url("../images/code-background.png") repeat scroll 0 0 /*#20201E*/;
+    border: 1px solid #C7BFAC;
+    letter-spacing: -0.04em;
+    line-height: 129%;
+    margin: 0.4em 3.05em 0 4.05em;
+    padding: 0.85em 0.6em 1.05em;
+    word-spacing: 0.04em;
+}
+
+p {
+    font-family: Consolas;
+    font-size: 2.2em;
+    font-weight: bold;
+	color: #fbeec9;
+}
+
+article:nth-child(2) div {
+    margin: 0.8em 3.05em 0 4.04em;
+}
+
+article:nth-child(2) {
+    margin-bottom: 0.6em;
+}
+
+article:nth-child(3) h2 .htag {
+    letter-spacing: 0.08em;
+    padding: 0 0.06em;
+}
+
+article:nth-child(3) div {
+    line-height: 225%;
+    margin: 0.68em 3.05em 0 4.05em;
+    padding: 0.18em 0.6em 0.62em;
+}
+.spdiv {
+    padding-left: 1.6em;
+}
+/* END POWER POINT SLIDE CSS */

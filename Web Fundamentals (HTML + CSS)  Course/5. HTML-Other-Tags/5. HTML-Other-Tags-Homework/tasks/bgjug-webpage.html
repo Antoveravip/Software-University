@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html>
+<head>
+	<meta name="description" content="Lesson 5, HTML5 Semantic HTML, Frames, Other Tags homework, Task 4, BGJUG WebPage">
+	<meta name="keywords" content="lesson, exercise, homework, HTML5 Semantic HTML, Frames, Other Tags, BGJUG WebPage">
+	<meta name="author" content="Removed for reasons of anonymity">
+	<meta charset="UTF-8">
+	<title>BGJUG WebPage</title>
+	<link rel="stylesheet" type="text/css" href="../styles/bgjug-webpage.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>BGJUG - Bulgarian Java User Group</h1>
+			<nav>
+				<ul>
+					<li>About</li>
+					<li>Events</li>
+					<li>Contacts</li>
+					<li id="search">
+						<form method="get" action="" id="search-area">
+						  <input name="q" type="text" size="40" placeholder="Search" />
+						</form>					
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<aside id="left">
+			<ul>
+				<li>An Architecture for E-Voting</li>
+				<li>Integration Tests for External Services</li>
+				<li>Algorithmic Music Influenced by Tweets</li>
+				<li>The Low Quality of Scientific Code</li>
+				<li>Development "Methodologies"</li>
+			</ul>
+		</aside>
+		<section>
+			<article>
+				<h2>An Architecture for E-Voting</h2>
+				<div class="info">by <span class="author"><a href="#" rel="author">Bozho</a></span> on MAY 27, 2014 <span class="comment"><a href="#">Leave a comment</a></span></div>
+				<div class="content">
+					 E-voting is a hot topic in my country,and has been discussed a lot everywhere.
+					 Since we are already using the internet and touch-screen technologies in our everyday lives,
+					 why not apply that to voting? And not for the sake of technology itself, but in order to
+					 prevent technical mistakes and election fraud, and make [...]
+				</div>
+				<span class="view-more"><a href="#">Continue Reading →</a></span>
+			</article>
+			<article>
+				<h2>The Optional Type API</h2>
+				<div class="info">by <span class="author"><a href="#" rel="author">Bozho</a></span> on MARCH 19, 2014 <span class="comment"><a href="#">Leave a comment</a></span></div>
+				<div class="content">
+					Java 8 introduces the Optional class. In a nutshell, instead of returning null,
+					and then checking for null, you return an Optional instance, which can either have
+					or not have a value set. That way you don’t fail with NullPointerException. I won’t
+					discuss whether the Optional type will eliminate NPEs completely (it won’t). Instead I’ll […]
+				</div>
+				<span class="view-more"><a href="#">Continue Reading →</a></span>
+			</article>
+			<span class="prev"><a href="#">← Previous Entries</a></span>
+		</section>
+		<aside id="right">
+			<p class="right-title">Language</p>
+			<select>
+				<option>English</option>
+				<option selected>Bulgarian</option>
+				<option>French</option>
+				<option>German</option>
+			</select>
+			<p class="right-title">Blogroll</p>
+		</aside>
+		<div id="twitter-bar">
+            <p>Set your Twitter account name in your settings to use the TwitterBar Section.</p>
+        </div>
+		<footer>
+			<article>
+				<h2>BGJUG - Java Bulgarian User Group</h2>
+			</article>
+			<article>
+				<h3>Pages</h3>
+				<ul>
+					<li><a href="http:#">About</a></li>
+					<li><a href="http:#">Events</a></li>
+					<li><a href="http:#">Contacts</a></li>
+				</ul>
+			</article>
+			<article>
+				<h3>The Latest</h3>
+				<article>
+					<h4>An Architecture for E-Voting</h4>
+					<p>E-voting is a hot topic in my country, and has been discussed [....]</p>
+				</article>
+			</article>
+			<article>
+				<h3>More</h3>
+				<p>Thanks for dropping by! Feel free to join the discussion by leaving comments, and stay updated by subscribing to the <a href="http:#">RSS feed</a>.</p>
+			</article>
+			<article>
+				<p>&copy; 2011 BGJUG - Java Bulgarian User Group</p>
+			</article>
+		</footer>
+	</div>
+</body>
+</html>

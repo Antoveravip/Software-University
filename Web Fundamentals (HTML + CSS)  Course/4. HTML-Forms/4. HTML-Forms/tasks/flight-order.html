@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html>
+<head>
+	<meta name="description" content="Lesson 5, HTML5 Forms homework, Task 1, Flight Order">
+	<meta name="keywords" content="lesson, exercise, homework, HTML5 Forms, Flight Order">
+	<meta name="author" content="Removed for reasons of anonymity">
+	<meta charset="UTF-8">
+	<title>Flight Order</title>
+	<link rel="stylesheet" type="text/css" href="../styles/flight-order.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<h2>FLIGHT ORDER</h2>
+		<form method="post" id="flight-order">
+			<fieldset name="flight-order" form="flight-order">
+				<div class="left">
+					<label for="departure">From</label>
+					<select name="departure" id="departure" required="required">
+						<option value="" selected="selected">enter a city</option>
+						<option value="Sofia">Sofia</option>
+						<option value="Berlin">Berlin</option>
+						<option value="London">London</option>
+						<option value="Madrid">Madrid</option>
+						<option value="Paris">Paris</option>
+						<option value="Amsterdam">Amsterdam</option>
+						<option value="Rome">Rome</option>
+					</select>
+				</div>
+				<div class="right">
+					<label for="arrival">To</label>
+						<select name="arrival" id="arrival" required="required">
+						<option value="" selected="selected">enter a city</option>
+						<option value="Sofia">Sofia</option>
+						<option value="Berlin">Berlin</option>
+						<option value="London">London</option>
+						<option value="Madrid">Madrid</option>
+						<option value="Paris">Paris</option>
+						<option value="Amsterdam">Amsterdam</option>
+						<option value="Rome">Rome</option>
+					</select>
+				</div>
+				<div class="checks">
+					<input id="prefer-directs" type="checkbox" name="prefer-directs" value="yes">
+					<label for="prefer-directs" id="prefer-label">Prefer directs</label>
+				</div>
+				<div class="left">
+					<label for="departure-date">Departure Date</label>
+					<input type="date" id="departure-date" value="2014-06-09">
+				</div>
+				<div class="right">
+					<label for="departure-start-time">Time Interval</label>
+					<input type="time" name= "departure-start-time" id="departure-start-time" class="start-end-time" value="00:20">
+					<input type="time" name= "departure-end-time" id="departure-end-time" class="start-end-time" value="05:00">
+				</div>
+				<div class="rdate">
+					<label for="return-date">Return Date</label>
+					<input type="date" id="return-date" value="2014-06-13">
+				</div>
+				<div class="artime">
+					<label for="arrival-start-time">Time Interval</label>
+					<input type="time" name= "arrival-start-time" id="arrival-start-time" class="start-end-time" value="16:00">
+					<input type="time" name= "arrival-end-time" id="arival-end-time" class="start-end-time" value="22:00">
+				</div>
+				<div class="age adult">
+					<label for="adult-age">12+</label>
+					<input type="number" max="12" min="0" id="adult-age" value="0" class="numbers">
+				</div>
+				<div class="age">
+					<label for="kids">2-12</label>
+					<input type="number" max="12" min="2" id="kids" value="0" class="numbers">
+				</div>
+				<div class="age">
+					<label for="baby">0-2</label>
+					<input type="number" max="2" min="0" id="baby" value="0" class="numbers">
+				</div>
+				<div class="right">
+					<label for="class">Choose class</label>
+					<select name="class" id="class" required="required">
+						<option value="">Choose class</option>
+						<option selected="selected" value="economy">Economy</option>
+						<option value="business">Business</option>
+					</select>
+				</div>
+				<input type="submit" value="Search">
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

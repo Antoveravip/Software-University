@@ -1,0 +1,492 @@
+/*
+Info: CSS for HTML Lesson 3, HTML5 Overview homework
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator
+*/
+/* CLEAR BROWSER DEFAULT VALUES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address,
+del, img, ins, q, s, strike,
+u, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+b, i, dfn, em, strong, code,
+samp, cite, kbd, var, tt {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+small, big {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+sub, sup {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+pre {
+	display: block;
+	font-family: inherit;
+	white-space: pre;
+	margin: 0;
+}
+
+/* END CLEAR BROWSER DEFAULT VALUES */
+
+/* START MAIN CSS */
+
+/* RESTORE HEADINGS VALUES */
+h1 {
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+	margin: .67em 0.5em;
+ }
+ 
+h2 /*,
+:-moz-any(article, aside, nav, section) h1*/ {
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0.83em 0;
+ }
+ 
+ h3 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)  h1*/ {
+	display: block;
+	font-size: 1.17em;
+	font-weight: bold;
+	margin: 1em 0;
+ }
+ 
+ h4 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 1.00em;
+   font-weight: bold;
+   margin: 1.33em 0;
+ }
+ 
+ h5 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.83em;
+   font-weight: bold;
+   margin: 1.67em 0;
+ }
+ 
+ h6 /*,
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section)
+:-moz-any(article, aside, nav, section) h1*/ {
+   display: block;
+   font-size: 0.67em;
+   font-weight: bold;
+   margin: 2.33em 0;
+ }
+/* END RESTORE HEADINGS VALUES */
+
+body {
+	font-family: Calibri, serif;
+	font-size: 1.2em;
+	background-color: #b5bbbf;	
+}
+.wrapper header, 
+.wrapper  article, 
+.wrapper  section {
+	width: auto;
+	margin: 0px;
+	padding: 10px 0 0 30px;
+}
+
+.wrapper footer {
+	padding: 0 !important;
+} 
+ 
+header {
+	/*background: #*/ /* Leaved empty for the moment */
+	/*background: #*/ /* Leaved empty for the moment */
+} 
+/* START NAV MENU */
+nav {
+  background-color: #5d6569;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  color: #888;
+  display: block;
+  margin: 5px 10px 5px 10px;
+  overflow: hidden;
+  width: 95%; 
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  vertical-align: middle;
+  list-style-type: none;  
+  -webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s; 
+}
+  
+nav > ul > li > a > .arrow {
+	margin-left: 5px;
+	border-top: 5px solid #aaa;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 0;
+	vertical-align: middle;
+	-webkit-transition: color 0.1s linear;
+	  -moz-transition: color 0.1s linear;
+	-o-transition: color 0.1s linear;
+	  transition: color 0.1s linear; 
+}
+
+nav > ul > li > a {
+	color: #aaa;
+	display: block;
+	line-height: 56px;
+	padding: 0 15px;
+	text-decoration: none;
+}
+
+nav > ul > li:hover {
+	background-color: rgb( 40, 44, 47 );
+}
+
+nav > ul > li:hover > a {
+	color: rgb( 255, 255, 255 );
+}
+
+nav > ul > li:hover > a > .arrow {
+	margin-left: 5px;
+	border-top-color: rgb( 255, 255, 255 );
+}
+
+nav > ul > li > ul {
+	background-color: rgb( 40, 44, 47 );
+	border-top: 0;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+	display: none;
+	margin: 0;
+	opacity: 0;
+	position: absolute;
+	width: 165px;
+	visibility: hidden;
+	z-index: 100;
+	-webkit-transiton: opacity 0.2s;
+	-moz-transition: opacity 0.2s;
+	-ms-transition: opacity 0.2s;
+	-o-transition: opacity 0.2s;
+	-transition: opacity 0.2s;
+}
+
+nav > ul > li:hover > ul {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}
+
+nav > ul > li > ul > li {
+	display: block;
+}
+
+nav > ul > li > ul > li > a {
+	color: #fff;
+	display: block;
+	padding: 12px 24px;
+	text-decoration: none;
+}
+
+nav > ul > li > ul > li:hover > a {
+	background-color: rgba( 255, 255, 255, 0.1);
+}
+
+nav img {
+	padding: 0px;
+	display: block;
+}
+ 
+/* END NAV MENU */
+ 
+ 
+ 
+
+h2 a {
+	text-decoration: none;
+	color: green;
+} 
+ 
+article img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	padding: 10px;
+}
+img {
+	padding: 10px;
+}
+.task-descr > div {
+    text-align: center;
+}
+
+.task-descr > div p {
+    text-align: left;
+}
+.tag-name, 
+.tag-depr,
+.tag-nr {
+    display: inline-block;
+    width: 10%;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+.tag-descr {
+    display: inline-block;
+    width: 90%;
+}
+.tag-name {
+    color: #008000;
+}
+
+.tag-depr {
+    color: #8b0000;
+}
+
+.tag-nr {
+    color: #a0522d;
+}
+
+.wrapper section {
+    padding: 10px 30px 30px 50px;
+}
+.main-tag {
+    background-color: #5d6569 !important;
+    text-align: center;
+}
+.main-tag span {
+	color: #000000;
+}
+
+.main-tags p:nth-child(2n+2),
+.depr-tags p:nth-child(2n+2) {
+   background-color: #747474;
+}
+
+.main-tags p:nth-child(2n+1),
+.depr-tags p:nth-child(2n+1) {
+    background-color: #959595;
+}
+
+.double {
+	text-align: center;
+}
+
+.double img {
+	display: inline-block;
+}
+.alleft {
+	float:left;
+	padding: 0;
+	margin: 0;
+	margin-right: 10px;
+} 
+
+.tag-main {
+    background-color: #5d6569 !important;
+}
+.tag-main span {
+	color: #000000;
+}
+
+.tag-old-code{
+    display: inline-block;
+    width: 21%;
+}
+.tag-new-code {
+    display: inline-block;
+    width: 29%;
+}
+
+.tag-n {
+    display: inline-block;
+    width: 6%;
+}
+
+.tag-old-view,
+.tag-new-view {
+    display: inline-block;
+    width: 10%;
+}
+.tag-css {
+    display: inline-block;
+    width: 24%;
+	vertical-align: top;
+}
+.b,
+.strong {
+    font-weight: bold;
+}
+.i,
+.em,
+.dfn,
+.var,
+.cite {
+    font-style:italic;
+}
+.u,
+.ins {
+	text-decoration:underline
+}
+.sup {
+	vertical-align: super;
+}
+.sub { 
+	vertical-align: sub;
+}
+.pre {
+	white-space:pre;
+}
+.code,
+.samp,
+.kbd,
+.tt { 
+	font-family: Courier New,monospace;
+    font-size: 0.9em;
+}
+
+.last-art {
+    padding: 0 !important;
+}
+.mark {
+	background-color: yellow;
+}    
+.del, 
+.strike {
+	text-decoration:line-through;
+}
+.small {
+	font-size: smaller;
+}
+.big {
+	font-size: larger;
+}
+/* START FOOTER */
+
+footer li {
+	display: inline-block;	
+	vertical-align: middle;
+}
+
+footer {
+	text-align: center;
+	background: #5d6569;
+}
+
+footer img, 
+footer li img {
+	width: auto;
+	height: 31px;
+	padding: 10px 5px;
+}
+
+footer ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+
+footer ul li { 
+	display: inline-block;
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+footer ul li a:hover
+{
+	color: rgb(181, 187, 191);
+	background-color: rgb(93, 101, 105);
+	text-shadow: rgb(224, 224, 224) 1px 1px 0px;	
+}
+
+footer ul li img:hover
+{
+	height: 41px;
+	padding: 5px 0px;
+}
+
+.footer-info img:hover
+{
+	height: 31px;
+	border: 1px solid black;
+	margin: 9px 4px;
+	padding: 0px 0px;
+}
+/* END FOOTER */
