@@ -1,0 +1,115 @@
+<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="description" content="Lesson 2, JavaScript Basics, JavaScript Syntax, Task 6, Bit Checker" />
+	<meta name="keywords" content="lesson, exercise, JavaScript Basics, JavaScript Syntax, Bit Checker" />
+	<meta name="author" content="Removed for reasons of anonymity" />
+	<meta charset="UTF-8" />
+	<title>Bit Checker | JavaScript Syntax</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>JavaScript Syntax - Task 6: Bit Checker</h1>
+			<nav>
+				<ul>
+					<li><a href="../index.html" title="Home" target="_self" >Home</a></li>
+					<li><a href="powerful-cars.html" title="Powerful Cars" target="_blank" >Powerful Cars</a></li>
+					<li><a href="simple-calculations.html" title="Simple Calculations" target="_blank" >Simple Calculations</a></li>
+					<li><a href="check-even-number.html" title="Check if Number is Even" target="_blank" >Check Even Number</a></li>
+					<li><a href="check-prime-number.html" title="Check if Number is Prime" target="_blank" >Check Prime Number</a></li>
+					<li><a href="division-by-3.html" title="Division by 3" target="_blank" >Division by 3</a></li>
+					<li class="active"><a href="bit-checker.html" title="Bit Checker" target="_blank" >Bit Checker</a></li>
+					<li><a href="supply-calculator.html" title="The Lifetime Supply Calculator" target="_blank" >Supply Calculator</a></li>
+					<li><a href="cylinder-volume.html" title="Cylinder Volume" target="_blank" >Cylinder Volume</a></li>
+					<li><a href="tree-or-house.html" title="Tree or House" target="_blank" >Tree or House</a></li>
+					<li><a href="digit-checker.html" title="Digit Checker" target="_blank" >Digit Checker</a></li>
+					<li><a href="digit-as-word.html" title="Digit as Word" target="_blank" >Digit as Word</a></li>
+					<li><a href="variables.html" title="Variables" target="_blank" >Variables</a></li>
+					<li><a href="digital-soothsayer.html" title="Digital Soothsayer" target="_blank" >Digital Soothsayer</a></li>
+					<li><a href="calculate-expression.html" title="Calculate Expression" target="_blank" >Calculate Expression</a></li>
+					<li>
+						<a href="https://softuni.bg/downloads/svn/javascript-basics/July-2014/2.%20JavaScript-Syntax-Homework.docx" download="JavaScript-Syntax-Homework">
+							<img src="../images/download.png" alt="Download" title="Download homework tasks" width="56" height="56" >
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="task-descr">
+			<h2><a href="bit-checker.html" title="Task 6: Bit Checker" target="_blank" >Task 6: Bit Checker</a></h2>
+			<div>
+				<p>Write a JavaScript function <span class="important">bitChecker(value)</span> that finds if the bit 3 an <span class="important">integer number</span> (counting from 0) is 1. Write JS program <span class="important">checkingBits.js</span> to check a few numbers. The result (<span class="important">true</span> or <span class="important">false</span>) should be printed on the console. Run the program through <span class="important">Node.js</span>. Examples:</p>
+				<a href="bit-checker.html" target="_blank" >
+					<img src="../images/bit-checker.png" alt="Task 6: Bit Checker" title="Task 6: Bit Checker" width="430" height="286" />
+				</a>
+			</div>
+			<div>
+				<p>To check the result in node.js - open command prompt and enter: node checkingBits.js. Or you can view the result in console! Or you can input value and see the result in html.</p>
+			</div>
+			<div id="output">
+				<label for="data">Enter number:</label>
+				<input type="text" id="data" />
+				<button name="calc" type="button" onclick="bitCheckerByInput()">Check</button>
+			</div>
+		</section>
+		<footer>
+			<ul>
+				<li class="author" ><a rel="author" href="#" >Copyright &copy;2014 by "Removed for reasons of anonymity"</a></li>
+				<li class="footer-info" >
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+						<img src="../images/creative-commons-license.png" alt="Creative Commons License" title="Creative Commons License" width="88" height="31">
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://validator.w3.org/check?uri=http://softuni.bg -->
+					<a href="http://validator.w3.org/#validate_by_input">
+						<img src="../images/valid-html5.png" alt="Valid HTML5!" title="Valid HTML5!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://www.css-validator.org/validator?uri=http://softuni.bg&profile=css3 
+						 http://jigsaw.w3.org/css-validator/check/referer -->
+					<a href="http://jigsaw.w3.org/css-validator/#validate_by_input">
+						<img src="../images/valid-css3.gif" alt="Valid CSS3!" title="Valid CSS3!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="author" >Contact with me:</li>
+				<li>
+					<a href="http://www.facebook.com/#">
+						<img src="../images/social_buttons/facebook.png" alt="Facebook" title="Facebook" width="31" height="31">
+					</a>
+				</li>
+				<li>
+					<a href="https://plus.google.com/#">
+						<img src="../images/social_buttons/google.png" alt="Google+" title="Google+" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="http://www.linkedin.com/profile/#">
+						<img src="../images/social_buttons/linkedIn.png" alt="LinkedIn" title="LinkedIn" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/#">
+						<img src="../images/social_buttons/twitter.png" alt="Twitter" title="Twitter" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a  href="skype:#?chat">
+						<img src="../images/social_buttons/skype.png" alt="Skype" title="Skype" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="mailto:#">
+						<img src="../images/social_buttons/email.png" alt="Email" title="Email" width="31" height="31" >
+					</a>
+				</li>
+			</ul>		
+		</footer>
+	</div>
+	<script async type="text/javascript" src="../scripts/checkingBits.js"></script>
+</body>
+</html>

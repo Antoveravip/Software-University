@@ -1,0 +1,114 @@
+<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="description" content="Lesson 4, JavaScript Basics, JavaScript Functions and Objects, Task 3, Number with Largest Sum of Digits" />
+	<meta name="keywords" content="lesson, exercise, JavaScript Basics, JavaScript Functions and Objects homework, Number with Largest Sum of Digits" />
+	<meta name="author" content="Removed for reasons of anonymity" />
+	<meta charset="UTF-8" />
+	<title>Number with Largest Sum of Digits | JavaScript Functions and Objects</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>JavaScript Functions and Objects Homework - Task 3: Number with Largest Sum of Digits</h1>
+			<nav>
+				<ul>
+					<li><a href="../index.html" title="Home" target="_self" >Home</a></li>
+					<li><a href="last-digit-of-number.html" title="Last Digit of Number" target="_blank" >Last Digit of Number</a></li>
+					<li><a href="n-th-digit-of-number.html" title="N-th Digit of Number" target="_blank" >N-th Digit of Number</a></li>
+					<li class="active"><a href="number-with-largest-sum-of-digits.html" title="Number with Largest Sum of Digits" target="_blank" >Number with Largest Sum of Digits</a></li>
+					<li><a href="bigger-than-neighbors.html" title="Bigger Than Neighbors" target="_blank" >Bigger Than Neighbors</a></li>
+					<li><a href="reverse-every-word-in-a-string.html" title="Reverse Every Word in a String" target="_blank" >Reverse Every Word in a String</a></li>
+					<li><a href="count-number-of-divs.html" title="Count Number of DIVs" target="_blank" >Count DIVs</a></li>
+					<li><a href="find-youngest-person.html" title="Find Youngest Person" target="_blank" >Find Youngest Person</a></li>
+					<li><a href="sum-of-two-huge-numbers.html" title="Sum of Two Huge Numbers" target="_blank" >Sum of Two Huge Numbers</a></li>
+					<li><a href="array-prototype-function.html" title="Array Prototype Function" target="_blank" >Array Prototype Function</a></li>
+					<li><a href="deep-copy-of-object.html" title="Deep Copy of Object" target="_blank" >Deep Copy of Object</a></li>
+					<li><a href="group-persons.html" title="Group Persons" target="_blank" >Group Persons</a></li>
+					<li>
+						<a href="https://softuni.bg/downloads/svn/javascript-basics/July-2014/4.%20JavaScript-Functions-and-Objects-Homework.docx" download="JavaScript-Functions-and-Objects-Homework">
+							<img src="../images/download.png" alt="Download" title="Download homework tasks" width="56" height="56" >
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="task-descr">
+			<h2><a href="number-with-largest-sum-of-digits.html" title="Task 3: Number with Largest Sum of Digits" target="_blank" >Task 3: Number with Largest Sum of Digits</a></h2>
+			<div>
+				<p>Write a JavaScript function <span class="important">findLargestBySumOfDigits(nums)</span> that takes as an input a sequence of positive integer numbers and returns the element with the largest sum of its digits. The function should take a <span class="important">variable number of arguments</span>. It should return <span class="important">undefined</span> when 0 arguments are passed or when some of the arguments is not an integer number. Write a JS program <span class="important">largestSumOfDigits.js</span> that invokes your function with the sample input data below and prints its output at the console. Examples:</p>
+				<a href="number-with-largest-sum-of-digits.html" target="_blank" >
+					<img src="../images/number-with-largest-sum-of-digits.png" alt="Task 3: Number with Largest Sum of Digits" title="Task 3: Number with Largest Sum of Digits" width="388" height="187" />
+				</a>
+			</div>
+            <div id="output">
+            	<p>Some numbers to test with:</p>
+            	<p>5, 10, 15, 111</p>
+            	<p>33, 44, -99, 0, 20</p>
+            	<p>'hello'</p>
+            	<p>5, 3.3</p>
+                <label for="data">Enter numbers:</label>
+                <input type="text" id="data" value="5, 10, 15, 111" /><br />
+                <button name="calc" type="button" onclick="largestSumOfDigitsByInput()">Find</button>
+            </div>
+		</section>
+		<footer>
+			<ul>
+				<li class="author" ><a rel="author" href="#" >Copyright &copy;2014 by "Removed for reasons of anonymity"</a></li>
+				<li class="footer-info" >
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+						<img src="../images/creative-commons-license.png" alt="Creative Commons License" title="Creative Commons License" width="88" height="31">
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://validator.w3.org/check?uri=http://softuni.bg -->
+					<a href="http://validator.w3.org/#validate_by_input">
+						<img src="../images/valid-html5.png" alt="Valid HTML5!" title="Valid HTML5!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://www.css-validator.org/validator?uri=http://softuni.bg&profile=css3 
+						 http://jigsaw.w3.org/css-validator/check/referer -->
+					<a href="http://jigsaw.w3.org/css-validator/#validate_by_input">
+						<img src="../images/valid-css3.gif" alt="Valid CSS3!" title="Valid CSS3!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="author" >Contact with me:</li>
+				<li>
+					<a href="http://www.facebook.com/#">
+						<img src="../images/social_buttons/facebook.png" alt="Facebook" title="Facebook" width="31" height="31">
+					</a>
+				</li>
+				<li>
+					<a href="https://plus.google.com/#">
+						<img src="../images/social_buttons/google.png" alt="Google+" title="Google+" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="http://www.linkedin.com/profile/#">
+						<img src="../images/social_buttons/linkedIn.png" alt="LinkedIn" title="LinkedIn" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/#">
+						<img src="../images/social_buttons/twitter.png" alt="Twitter" title="Twitter" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a  href="skype:#?chat">
+						<img src="../images/social_buttons/skype.png" alt="Skype" title="Skype" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="mailto:#">
+						<img src="../images/social_buttons/email.png" alt="Email" title="Email" width="31" height="31" >
+					</a>
+				</li>
+			</ul>		
+		</footer>
+	</div>
+	<script type="text/javascript" src="../scripts/largestSumOfDigits.js"></script>
+</body>
+</html>

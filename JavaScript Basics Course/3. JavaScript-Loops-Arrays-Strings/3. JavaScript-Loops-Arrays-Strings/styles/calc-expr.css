@@ -1,0 +1,31 @@
+/*
+Info: CSS for JavaScript Basics Course
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator http://jigsaw.w3.org/css-validator/
+*/
+
+#output{
+    width: 400px;
+    margin:0 auto;
+    padding:0;
+}
+#expression, 
+#result {
+    width:250px !important;
+    padding: 5px 10px !important;
+    margin:0 auto;
+    height: 20px;
+    background: darkblue;
+    color:orange;
+    display: inline-block;
+}
+#calcButton {
+    margin:15px auto;
+    height: 40px;
+    padding: 0 20px;
+    display: block;
+    background: #FFF;
+}
+#calcButton:hover{
+    background: orange;
+}

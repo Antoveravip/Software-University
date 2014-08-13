@@ -1,0 +1,116 @@
+<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="description" content="Lesson 5, JavaScript Basics, JavaScript DOM and Events, Task 2, Display DIVs Content" />
+	<meta name="keywords" content="lesson, exercise, JavaScript Basics, JavaScript DOM and Events homework, Display DIVs Content" />
+	<meta name="author" content="Removed for reasons of anonymity" />
+	<meta charset="UTF-8" />
+	<title>Display DIVs Content | JavaScript DOM and Events</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>JavaScript DOM and Events - Task 2: Display DIVs Content</h1>
+			<nav>
+				<ul>
+					<li><a href="../index.html" title="Home" target="_self" >Home</a></li>
+					<li><a href="like-unlike-button.html" title="Like / Unlike Button" target="_blank" >Like / Unlike Button</a></li>
+					<li class="active"><a href="display-divs-content.html" title="Display DIVs Content" target="_blank" >Display DIVs Content</a></li>
+					<li><a href="hide-odd-rows.html" title="Hide Odd Rows" target="_blank" >Hide Odd Rows</a></li>
+					<li><a href="numbers-only-field.html" title="Numbers Only Field" target="_blank" >Numbers Only Field</a></li>
+					<li><a href="print-mouse-coordinates.html" title="Print Mouse Coordinates" target="_blank" >Print Mouse Coordinates</a></li>
+					<li><a href="tetris.html" title="JavaScript Tetris" target="_blank" >JavaScript Tetris</a></li>
+					<li>
+						<a href="https://softuni.bg/downloads/svn/javascript-basics/July-2014/5.%20DOM-and-Events-Homework.docx" download="JavaScript-DOM-and-Events-Homework">
+							<img src="../images/download.png" alt="Download" title="Download homework tasks" width="56" height="56" >
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="task-descr">
+			<h2><a href="display-divs-content.html" title="Task 2: Display DIVs Content" target="_blank" >Task 2: Display DIVs Content</a></h2>
+			<div>
+				<p>You are given a HTML file holding several <span class="important">&lt;div&gt;</span> elements. Write a JavaScript code to print the text content of all <span class="important">&lt;div&gt;</span> elements as unordered list:</p>
+				<a href="display-divs-content.html" target="_blank" >
+					<img src="../images/display-divs-content.png" alt="Task 2: Display DIVs Content" title="Task 2: Display DIVs Content" width="986" height="342" />
+				</a>
+			</div>
+            <div id="output">
+            	<p>Some data to test with:</p>
+            	<div>&lt;div&gt;first div&lt;/div&gt;
+  &lt;div&gt;second div&lt;/div&gt;
+  &lt;div class=&quot;empty&quot;&gt;&lt;/div&gt;
+  &lt;div&gt;third div&lt;div&gt;inner div&lt;/div&gt;&lt;/div&gt;
+  &lt;div&gt;fourth div&lt;/div&gt;</div>
+                <div id="input">
+					<div>first div</div>
+					<div>second div</div>
+					<div class="empty"></div>
+					<div>third div<div>inner div</div></div>
+					<div>fourth div</div>
+					<ul id="result"></ul>
+                </div>
+                <button name="calc" type="button" onclick="replaceDivElements()">Replace</button>
+            </div>
+		</section>
+		<footer>
+			<ul>
+				<li class="author" ><a rel="author" href="#" >Copyright &copy;2014 by "Removed for reasons of anonymity"</a></li>
+				<li class="footer-info" >
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+						<img src="../images/creative-commons-license.png" alt="Creative Commons License" title="Creative Commons License" width="88" height="31">
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://validator.w3.org/check?uri=http://softuni.bg -->
+					<a href="http://validator.w3.org/#validate_by_input">
+						<img src="../images/valid-html5.png" alt="Valid HTML5!" title="Valid HTML5!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://www.css-validator.org/validator?uri=http://softuni.bg&profile=css3 
+						 http://jigsaw.w3.org/css-validator/check/referer -->
+					<a href="http://jigsaw.w3.org/css-validator/#validate_by_input">
+						<img src="../images/valid-css3.gif" alt="Valid CSS3!" title="Valid CSS3!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="author" >Contact with me:</li>
+				<li>
+					<a href="http://www.facebook.com/#">
+						<img src="../images/social_buttons/facebook.png" alt="Facebook" title="Facebook" width="31" height="31">
+					</a>
+				</li>
+				<li>
+					<a href="https://plus.google.com/#">
+						<img src="../images/social_buttons/google.png" alt="Google+" title="Google+" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="http://www.linkedin.com/profile/#">
+						<img src="../images/social_buttons/linkedIn.png" alt="LinkedIn" title="LinkedIn" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/#">
+						<img src="../images/social_buttons/twitter.png" alt="Twitter" title="Twitter" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a  href="skype:#?chat">
+						<img src="../images/social_buttons/skype.png" alt="Skype" title="Skype" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="mailto:#">
+						<img src="../images/social_buttons/email.png" alt="Email" title="Email" width="31" height="31" >
+					</a>
+				</li>
+			</ul>		
+		</footer>
+	</div>
+	<script type="text/javascript" src="../scripts/displayContent.js"></script>
+</body>
+</html>

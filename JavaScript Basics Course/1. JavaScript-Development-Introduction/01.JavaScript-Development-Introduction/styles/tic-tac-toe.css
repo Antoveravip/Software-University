@@ -1,0 +1,71 @@
+/*
+Info: CSS for JavaScript Basics, Lesson 1, JavaScript Development Introduction, Task 6, Tic Tac Toe
+Author: Removed for reasons of anonymity
+Successfully checked as (CSS level 3) in W3C CSS Validator http://jigsaw.w3.org/css-validator/
+*/
+#tic-tac-toe p {
+	display: block;
+	height: 102px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	text-align: -moz-center;
+	width: 308px;
+}
+#tic-tac-toe {
+	text-align: center;
+	text-align: -moz-center;
+	height: auto;
+	margin: 10px auto;
+	/*padding: 10px;*/
+	width: 308px;
+	/*background-color: #ffffff;*/
+	background: none repeat scroll 0 0 #eeeeee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.76) inset;
+}
+#tic-tac-toe span {
+	border: 2px solid #000;
+	display: inline-block;
+	float: left;
+	font-size: 80px;
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+	width: 100px;
+}
+#tic-tac-toe span.win{
+	color: green;
+}
+#info div{
+	font-size: 32px;
+}
+#info {
+    background: none repeat scroll 0 0 #eeeeee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.76) inset;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+    width: 220px;
+}
+#human {
+	color: green;
+}
+#comp{
+	color: red;
+}
+#tic-tac-toe p:first-child span {
+	border-top: medium none;
+}
+#tic-tac-toe p:last-child span {
+	border-bottom: medium none;
+}
+#tic-tac-toe p span:first-child {
+	border-left: medium none;
+}
+#tic-tac-toe p span:last-child {
+	border-right: medium none;
+}

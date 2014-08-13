@@ -1,0 +1,121 @@
+<!DOCTYPE html> <!-- This document was successfully checked as HTML5 in http://validator.w3.org/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="description" content="Lesson 3, JavaScript Basics, JavaScript Loops, Arrays, Strings, Task 13, Replace the White-Spaces" />
+	<meta name="keywords" content="lesson, exercise, JavaScript Basics, JavaScript Loops, Arrays, Strings, Replace the White-Spaces" />
+	<meta name="author" content="Removed for reasons of anonymity" />
+	<meta charset="UTF-8" />
+	<title>Replace the White-Spaces | JavaScript Loops, Arrays, Strings</title>
+	<link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Replace the White-Spaces</h1>
+			<nav>
+				<ul>
+					<li><a href="../index.html" title="Home" target="_self" >Home</a></li>
+					<li><a href="number-checker.html" title="Number Checker" target="_blank" >Number Checker</a></li>
+					<li><a href="min-max-number.html" title="Find Min and Max Number" target="_blank" >Min and Max Number</a></li>
+					<li><a href="properties.html" title="Properties" target="_blank" >Properties</a></li>
+					<li><a href="create-array.html" title="Create Array" target="_blank" >Create Array</a></li>
+					<li><a href="compare-chars.html" title="Compare Chars" target="_blank" >Compare Chars</a></li>
+					<li><a href="maximal-sequence.html" title="Maximal Sequence" target="_blank" >Maximal Sequence</a></li>
+					<li><a href="maximal-increasing-sequence.html" title="Maximal Increasing Sequence" target="_blank" >Maximal Increasing Sequence</a></li>
+					<li><a href="sort-array.html" title="Sort Array" target="_blank" >Sort Array</a></li>
+					<li><a href="most-frequent-number.html" title="Most Frequent Number" target="_blank" >Most Frequent Number</a></li>
+					<li><a href="reverse-string.html" title="Reverse String" target="_blank" >Reverse String</a></li>
+					<li><a href="check-the-brackets.html" title="Check the Brackets" target="_blank" >Check the Brackets</a></li>
+					<li><a href="substring-count.html" title="Substring Count" target="_blank" >Substring Count</a></li>
+					<li class="active"><a href="replace-the-white-spaces.html" title="Replace the White-Spaces" target="_blank" >Replace the White-Spaces</a></li>
+					<li><a href="palindromes.html" title="Palindromes" target="_blank" >Palindromes</a></li>
+					<li><a href="most-frequent-word.html" title="Most Frequent Word" target="_blank" >Most Frequent Word</a></li>
+					<li><a href="cards-frequencies.html" title="Cards Frequencies" target="_blank" >Cards Frequencies</a></li>
+					<li><a href="extract-element-content.html" title="Extract Element Content" target="_blank" >Extract Element Content</a></li>
+					<li><a href="replace-a-tag.html" title="Replace &lt;a&gt; Tag" target="_blank" >Replace &lt;a&gt; Tag</a></li>
+					<li><a href="text-modifier.html" title="Text Modifier" target="_blank" >Text Modifier</a></li>
+					<li>
+						<a href="https://softuni.bg/downloads/svn/javascript-basics/July-2014/3.%20JavaScript-Loops-Arrays-Strings-Homework.docx" download="JavaScript-Loops-Arrays-Strings-Homework">
+							<img src="../images/download.png" alt="Download" title="Download homework tasks" width="56" height="56" >
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="task-descr">
+			<h2><a href="replace-the-white-spaces.html" title="Task 13: Replace the White-Spaces" target="_blank" >Task 13: Replace the White-Spaces</a></h2>
+			<div>
+				<p>Write a JavaScript function <span class="important">replaceSpaces(value)</span> that replaces the <span class="important">white-space characters</span> in a text with <span class="important">&amp;nbsp; </span>. Write JS program <span class="important">spaceReplacer.js</span> that invokes your function with the sample input data below and prints the output at the console. Examples:</p>
+				<a href="replace-the-white-spaces.html" target="_blank" >
+					<img src="../images/replace-the-white-spaces.png" alt="Task 13: Replace the White-Spaces" title="Task 13: Replace the White-Spaces" width="845" height="89" />
+				</a>
+			</div>
+        	<div id="output">
+            	<p>Some texts:</p>
+            	<p>But you were living in another world tryin' to get your message through</p>
+            	<p>We are living in a yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.</p>
+            	<p>No one heard a single word you said. They should have seen it in your eyes. What was going around your head.</p><br />
+                <label for="data">Enter string:</label>
+                <input type="text" id="data" value="But you were living in another world tryin' to get your message through" /><br />
+                <button name="calc" type="button" onclick="replaceSpacesByInput()">Count</button>
+            </div>
+		</section>	
+		<footer>
+			<ul>
+				<li class="author" ><a rel="author" href="#" >Copyright &copy;2014 by "Removed for reasons of anonymity"</a></li>
+				<li class="footer-info" >
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+						<img src="../images/creative-commons-license.png" alt="Creative Commons License" title="Creative Commons License" width="88" height="31">
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://validator.w3.org/check?uri=http://softuni.bg -->
+					<a href="http://validator.w3.org/#validate_by_input">
+						<img src="../images/valid-html5.png" alt="Valid HTML5!" title="Valid HTML5!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="footer-info" >
+					<!-- http://www.css-validator.org/validator?uri=http://softuni.bg&profile=css3 
+						 http://jigsaw.w3.org/css-validator/check/referer -->
+					<a href="http://jigsaw.w3.org/css-validator/#validate_by_input">
+						<img src="../images/valid-css3.gif" alt="Valid CSS3!" title="Valid CSS3!" width="88" height="31" />
+					</a>
+				</li>
+				<li class="author" >Contact with me:</li>
+				<li>
+					<a href="http://www.facebook.com/#">
+						<img src="../images/social_buttons/facebook.png" alt="Facebook" title="Facebook" width="31" height="31">
+					</a>
+				</li>
+				<li>
+					<a href="https://plus.google.com/#">
+						<img src="../images/social_buttons/google.png" alt="Google+" title="Google+" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="http://www.linkedin.com/profile/#">
+						<img src="../images/social_buttons/linkedIn.png" alt="LinkedIn" title="LinkedIn" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/#">
+						<img src="../images/social_buttons/twitter.png" alt="Twitter" title="Twitter" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a  href="skype:#?chat">
+						<img src="../images/social_buttons/skype.png" alt="Skype" title="Skype" width="31" height="31" >
+					</a>
+				</li>
+				<li>
+					<a href="mailto:#">
+						<img src="../images/social_buttons/email.png" alt="Email" title="Email" width="31" height="31" >
+					</a>
+				</li>
+			</ul>		
+		</footer>
+	</div>
+	<script type="text/javascript" src="../scripts/spaceReplacer.js"></script>
+</body>
+</html>
