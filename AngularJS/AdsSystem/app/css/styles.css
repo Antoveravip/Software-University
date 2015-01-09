@@ -1,10 +1,4 @@
-.pesho {
-	color:red;
-}
-
-.pesho:hover {
-	color:blue 
-}
-.even_row {
-	background: red;
+.adImage img {
+	max-width:100%;
+    max-height: 150px;
 }

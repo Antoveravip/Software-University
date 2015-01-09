@@ -1,18 +1,18 @@
-var adsSystem = angular.module('adsSystemModule', ['ngRoute'])
-.config(function ($routeProvider) {
+'use strict';
+var adsApp = angular.module('adsApp', ['ngRoute'])
+.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
+    .when('/', {
+        templateUrl: '/templates/home.html',
+        controller: 'HomeController'
+    })
     .when('/register', {
         templateUrl: 'templates/register.html',
-        controller: MainControler
+        controller: 'HomeController'
     })
     .when('/login', {
         templateUrl: 'templates/login.html',
-        controller: MainControler
+        controller: 'HomeController'
     })
-    .when('/ads', {
-        templateUrl: 'templates/all-ads.html',
-        controller: MainControler
-    })
-});
-
-
+    .otherwise({redirectTo: '/'});
+}]);

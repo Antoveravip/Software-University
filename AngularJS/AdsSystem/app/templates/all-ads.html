@@ -1,11 +1,79 @@
-﻿<!DOCTYPE html>
+﻿<div class="row">
+    <section class="col-md-2">
+        <nav class="row">
+            <header>
+                <h2>Navigation</h2>
+            </header>
+            <ul>
+                <li>
+                    <a href="#/">Home</a>
+                </li>
+            </ul>
+        </nav>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+        <div class="row">
+            <p>To publish a new ad, please login.</p>
+            <a href="#/login">Login</a>
+            <a href="#/register">Register</a>
+        </div>
+    </section>
+    <section class="col-md-8">
+        <article class="row" data-ng-repeat="ad in data.ads">
+            <div class="row">
+                <header class="col-md-10">
+                    <h1 class="pull-left">{{ad.title}}</h1>
+                </header>
+                <div class="col-md-2">
+                    <span class="pull-right">{{ad.date | date: 'd-MMM-yyyy'}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="adImage">
+                        <img src="#" data-ng-src="{{ad.imageDataUrl}}" alt="{{ad.title}}" />
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="info">
+                        {{ad.text}}
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            Name:
+                        </div>
+                        <div class="col-md-10">
+                            {{ad.ownerName}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            Email:
+                        </div>
+                        <div class="col-md-10">
+                            {{ad.ownerEmail}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            Phone:
+                        </div>
+                        <div class="col-md-10">
+                            {{ad.ownerPhone}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
 
-</body>
-</html>
+    </section>
+    <section class="col-md-2">
+        <section class="col-md-12">
+            <h2>Categories</h2>
+            <button data-ng-repeat="category in categories">{{category.name}}</button>
+        </section>
+        <section class="col-md-12">
+            <h2>Towns</h2>
+            <button data-ng-repeat="town in towns">{{town.name}}</button>
+        </section>
+    </section>
+</div>
