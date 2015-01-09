@@ -10,20 +10,20 @@
             <div class="form-group col-md-12">
                 <label class="col-md-12 control-label" for="inputUsername">Username:</label>
                 <div class="col-md-6">
-                    <input type="text" placeholder="Username" id="inputUsername" class="form-control">
+                    <input type="text" placeholder="Username" ng-model="user.username" id="inputUsername" class="form-control">
                 </div>
             </div>
             <div class="form-group col-md-12">
                 <div class="col-md-6">
                     <label class="col-md-12 control-label" for="inputPassword">Password:</label>
                     <div class="col-md-12">
-                        <input type="password" placeholder="Password" id="inputPassword" class="form-control">
+                        <input type="password" placeholder="Password" ng-model="user.password" id="inputPassword" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label class="col-md-12 control-label" for="inputConfirmPassword">Confirm password:</label>
                     <div class="col-md-12">
-                        <input type="password" placeholder="Password" id="inputConfirmPassword" class="form-control">
+                        <input type="password" placeholder="Password" ng-model="user.passwordConfirm"  id="inputConfirmPassword" class="form-control">
                     </div>
                 </div>
             </div>
@@ -32,13 +32,13 @@
                 <div class="col-md-6">
                     <label class="col-md-12 control-label" for="inputName">Name:</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="Full name" id="inputName" class="form-control">
+                        <input type="text" placeholder="Full name" ng-model="user.name" id="inputName" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label class="col-md-12 control-label" for="inputEmail">Email:</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="Email" id="inputEmail" class="form-control">
+                        <input type="text" placeholder="Email" ng-model="user.email" id="inputEmail" class="form-control">
                     </div>
                 </div>
             </div>
@@ -47,25 +47,20 @@
                 <div class="col-md-6">
                     <label class="col-md-12 control-label" for="inputPhone">Phone:</label>
                     <div class="col-md-12">
-                        <input type="text" placeholder="Your phone" id="inputPhone" class="form-control">
+                        <input type="text" placeholder="Your phone" ng-model="user.phone" id="inputPhone" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label class="col-md-12 control-label" for="inputTown">Town:</label>
                     <div class="col-md-12">
-                        <select id="inputTown" class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <select id="inputTown" class="form-control" ng-options="town.id as town.name for town in towns" ng-model="user.townId">
                         </select>
                     </div>
                 </div>
             </div>
             <div class="form-group col-md-12">
                 <div class="col-md-6 col-md-offset-2">
-                    <button class="btn btn-primary" type="submit">Register</button>
+                    <button class="btn btn-primary" type="submit" ng-click="register(user)">Register</button>
                 </div>
                 <div class="col-md-6 col-md-offset-2">
                     <a href="#/login" class="">Login here</a>
