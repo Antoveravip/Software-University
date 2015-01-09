@@ -1,0 +1,10 @@
+{
+  "name": "AdsSystem",
+  "version": "0.0.0",
+  "description": "AdsSystem",
+  "main": "server.js",
+  "author": {
+    "name": "Petar",
+    "email": "ivanov.petar@gmail.com"
+  }
+}

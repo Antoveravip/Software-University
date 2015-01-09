@@ -1,0 +1,78 @@
+1. Create project structure
+
+2. Create main styling for the project
+
+3. Create public screens - public screens are accessible for site visitors without login.
+
+3.1.	Home screen - route: #/
+3.1.1. 		Lists all ads (without login).
+3.1.2. 		Implement paging.
+3.1.3. 		Implement filtering by category and town.
+
+3.2.	Login screen - route: #/login
+3.2.1.		Logins an existing user. Shows notification for success or error message. After login, the user is automatically redirected to the user home screen.
+
+3.3.	Register screen - route: #/register
+3.3.1.		Registers a new user. Shows notification for success or error message. After registration, the user is automatically logged in and is redirected to the user home screen.
+
+4. Create user screens - user screens are accessible for authorized users only (after login).
+
+4.1.	User home screen - route: #/user/home
+4.1.1.		This screen is the same like the Home screen, but includes a user navigation sidebar at the left.
+
+4.2.	Publish New Ad screen - route: #/user/ads/publish
+4.2.1.		Creates a new ad in the system and submits it for publishing.
+4.2.2.		Implement "Choose Image" functionality with live image preview.
+
+4.3.	List My Ads screen - route: #/user/ads
+4.3.1.		Lists user's ads.
+4.3.2.		Show [Deactivate], [Publish Again], [Edit] and [Delete] buttons depending on the ad status.
+4.3.3.		Implement paging.
+4.3.4.		Implement filtering by status (Published / Waiting Approval / Inactive).
+
+4.4.	Deactivate / Publish Again Ad
+4.4.1.		The [Deactivate] button should make an ad inactive. Available for ads in state Published and Waiting Approval.
+4.4.2.		The [Publish Ag-in] button should submit an ad for approval. Available for inactive ads only.
+4.4.3.		Shows notification for success or error message.
+
+4.5.	Edit Ad - route: #/user/ads/edit/:id
+4.5.1.		Users should be able to edit their inactive ads. Show notification for success or error message.
+4.5.2.		Implement "Change Image" and "Delete Image" functionality with live image preview.
+
+4.6.	Delete Ad - route: #/user/ads/delete/:id
+4.6.1.		Users should be able to delete their inactive ads. Show notification for success or error message.
+
+4.7.	Edit User Profile - route: #/user/profile
+4.7.1.		Users should be able to edit their profile data. Show notification for success or error message.
+
+4.8.	Change User Password - route: #/user/profile
+4.8.1.		Users should be able to change their password. Show notification for success or error message.
+
+4.9.	Logout - route: #/logout
+4.9.1.		Successfully logged in users should be able to logout from the app.
+4.9.2.		Logout shows a notification message and redirects to the Home screen.
+
+4.10.	Authorization Checks
+4.10.1.		Anonymous site visitors (without login) should be able to access the Public Screens but should not be able to access User Screens and Administration Screens.
+4.10.2.		An attempt to access anonymously these screens should redirect the user to the Home screen.
+
+5. * Bonus: Administrator Screens - implement the Administrator Screens and functionality as bonus.
+Administrator screens are accessible for users who are administrators (after login):
+
+5.1.	Admin Home Screen - #/admin/home
+5.2.	Admin Approve Ad
+5.3.	Admin Reject Ad
+5.4.	Admin Edit Ad - #/admin/ads/edit/:id
+5.5.	Admin Delete Ad - #/admin/ads/delete/:id
+5.6.	Admin List Users - #/admin/users/list
+5.7.	Admin Edit User - #/admin/users/edit/:id
+5.8.	Admin Change User Password - #/admin/users/edit/:id
+5.9.	Admin Delete User - #/admin/users/delete/:id
+5.10.	Admin List Categories - #/admin/categories/list
+5.11.	Admin Create Category - #/admin/categories/create
+5.12.	Admin Edit Category - #/admin/categories/edit/:id
+5.13.	Admin Delete Category - #/admin/categories/delete/:id
+5.14.	Admin List Towns - #/admin/towns/list
+5.15.	Admin Create Town - #/admin/towns/create
+5.16.	Admin Edit Town - #/admin/towns/edit/:id
+5.17.	Admin Delete Town - #/admin/towns/delete/:id
