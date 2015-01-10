@@ -1,50 +1,52 @@
 ﻿<section id="public-ads">
     <img src="../../images/circle-loading-animation.gif" ng-hide="ready" alt="Loading..." width="500" />
-    <article ng-cloak class="row" data-ng-repeat="ad in adsData.ads">
-        <div class="row">
-            <header class="col-md-10">
-                <h1 class="pull-left">{{ad.title}}</h1>
-            </header>
-            <div class="col-md-2">
-                <span class="pull-right">{{ad.date | date: 'd-MMM-yyyy'}}</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="adImage">
-                    <img src="#" data-ng-src="{{ad.imageDataUrl}}" alt="{{ad.title}}" />
+    <section data-ng-cloak>
+        <article class="row" data-ng-repeat="ad in adsData.ads">
+            <div class="row">
+                <header class="col-md-10">
+                    <h1 class="pull-left">{{ad.title}}</h1>
+                </header>
+                <div class="col-md-2">
+                    <span class="pull-right">{{ad.date | date: 'd-MMM-yyyy'}}</span>
                 </div>
             </div>
-            <div class="col-md-8">
-                <div class="info">
-                    {{ad.text}}
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        Name:
-                    </div>
-                    <div class="col-md-10">
-                        {{ad.ownerName}}
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="adImage">
+                        <img src="#" data-ng-src="{{ad.imageDataUrl}}" alt="{{ad.title}}" />
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        Email:
+                <div class="col-md-8">
+                    <div class="info">
+                        {{ad.text}}
                     </div>
-                    <div class="col-md-10">
-                        {{ad.ownerEmail}}
+                    <div class="row">
+                        <div class="col-md-2">
+                            Name:
+                        </div>
+                        <div class="col-md-10">
+                            {{ad.ownerName}}
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        Phone:
+                    <div class="row">
+                        <div class="col-md-2">
+                            Email:
+                        </div>
+                        <div class="col-md-10">
+                            {{ad.ownerEmail}}
+                        </div>
                     </div>
-                    <div class="col-md-10">
-                        {{ad.ownerPhone}}
+                    <div class="row">
+                        <div class="col-md-2">
+                            Phone:
+                        </div>
+                        <div class="col-md-10">
+                            {{ad.ownerPhone}}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </article>
-    <div data-pagination page="startPage" data-ng-model="currentPage" items-per-page="pageSize" total-items="adsData.numItems" data-ng-change="pageChanged()" boundary-links="true"></div>
+        </article>
+        <div data-pagination page="startPage" data-ng-model="currentPage" items-per-page="pageSize" total-items="adsData.numItems" data-ng-change="pageChanged()" boundary-links="true"></div>
+    </section>
 </section>

@@ -8,7 +8,9 @@
                 console.log(error);
         });
     
-    $scope.register = function (user) { 
+    $scope.register = function (user) {
         userData.register(user);
+        $rootScope.isLoggedIn = authentication.isLoggedIn();
+        $location.path('/user/home');
     }	
 }]);

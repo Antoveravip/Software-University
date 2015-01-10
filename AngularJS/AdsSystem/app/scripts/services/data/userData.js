@@ -22,15 +22,8 @@
         return resource;
     }
     
-    function logoutUser(user) {
-        var resource = $resource(baseServiceUrl + serviceUrl + "/logout")
-            .save(user);
-        resource.$promise
-            .then(function (data) {
-                authentication.removeUser();
-        });
-
-        return resource;
+    function logoutUser() {
+        authentication.removeUser();
     }
 
     function getAllUsers() {
