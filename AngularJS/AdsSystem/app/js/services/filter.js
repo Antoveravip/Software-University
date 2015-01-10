@@ -1,7 +1,7 @@
 ﻿adsApp.factory('filter', function () {
-    var filterParams = {};
+    var params = {};
     
-    function getFilterParams() { 
+    function getParams() { 
         return filterParams;
     }
 
@@ -12,9 +12,14 @@
     function filterByTown(town) { 
         filterParams.townId = town.id;
     }
+    
+    function setPageParams() {
+        // TODO;
+    }
 
     return {
-        getFilterParams: getFilterParams,
+        getParams: getParams,
+        setPageParams: setPageParams,
         filterByCategory: filterByCategory,
         filterByTown: filterByTown
     };

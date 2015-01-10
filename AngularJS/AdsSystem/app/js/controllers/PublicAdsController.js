@@ -5,8 +5,8 @@
     $scope.startPage = 1;
     $scope.pageSize = 10;
 
-    function loadAds(filterParams) {
-        filterParams = filterParams || {};
+    function loadAds(params) {
+        params = params || {};
 
         adsData.getAds(filterParams)
             .$promise
@@ -19,10 +19,10 @@
     loadAds();
 
     $scope.$on('categoryClicked', function (event, category) { 
-        loadAds(filter.getFilterParams());
+        loadAds(filter.getParams());
     });
 
     $scope.$on('townClicked', function (event, town) {
-        loadAds(filter.getFilterParams());
+        loadAds(filter.getParams());
     });
 }]);
