@@ -3,7 +3,9 @@
     townsData.getTowns()
         .$promise
         .then(function (data) {
-            $scope.towns = data;
+                $scope.towns = data;
+            }, function (error) { 
+                console.log(error);
         });
     
     $scope.register = function (user) { 

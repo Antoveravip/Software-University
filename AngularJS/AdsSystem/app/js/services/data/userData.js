@@ -10,13 +10,16 @@
              });
     }
     
-    function loginUser(user) { 
-        return $resource(baseServiceUrl + serviceUrl + "/login")
-            .save(user)
-            .$promise
+    function loginUser(user) {
+        var resource = $resource(baseServiceUrl + serviceUrl + "/login")
+            .save(user);
+
+        resource.$promise
             .then(function (data) {
-                authentication.saveUser(angular.toJson(data)); 
-            });
+            authentication.saveUser(angular.toJson(data));
+        });
+
+        return resource;
     }
     
     function logoutUser(user) { 

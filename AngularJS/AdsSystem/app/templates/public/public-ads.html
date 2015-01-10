@@ -1,5 +1,6 @@
 ﻿<section id="public-ads">
-    <article class="row" data-ng-repeat="ad in adsData.ads">
+    <img src="../../images/circle-loading-animation.gif" ng-hide="ready" alt="Loading..." width="500" />
+    <article ng-cloak class="row" data-ng-repeat="ad in adsData.ads">
         <div class="row">
             <header class="col-md-10">
                 <h1 class="pull-left">{{ad.title}}</h1>
