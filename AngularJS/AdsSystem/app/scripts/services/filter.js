@@ -2,15 +2,23 @@
     var params = {};
     
     function getParams() { 
-        return filterParams;
+        return params;
     }
 
-    function filterByCategory(category) { 
-        filterParams.categoryId = category.id;
+    function filterByCategory(category) {
+        if (category == null) { 
+            params.categoryId = null;
+        } else { 
+            params.categoryId = category.id;
+        }        
     }
     
-    function filterByTown(town) { 
-        filterParams.townId = town.id;
+    function filterByTown(town) {
+        if (town == null) {
+            params.townId = null;
+        } else {
+            params.townId = town.id;
+        }        
     }
     
     function setPageParams() {
