@@ -1,12 +1,13 @@
-﻿adsApp.controller('UserHomeController', ['$scope', '$location', 'adsData', function ($scope, $location, adsData) {
+﻿adsApp.controller('UserHomeController', ['$scope', '$location', 'adsData', 'userData', 'authentication', function ($scope, $location, adsData, userData, authentication) {
     $scope.pageTitle = 'Home';
-    $scope.username = 
+    $scope.isLoggedIn = authentication.isLoggedIn();
+    $scope.user = authentication.getUser();
     
-    $scope.login = function (user) {
-        userData.login(user)
+    $scope.logout = function (user) {
+        userData.logout(user)
             .$promise
             .then(function (data) {
-            $location.path('/');
+                $location.path('/');
         });
     }
 		

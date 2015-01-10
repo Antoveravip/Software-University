@@ -1,6 +1,6 @@
 ﻿<header>
     <h1>Ads - {{pageTitle}}</h1>
-    <div >
+    <div data-ng-if="isLoggedIn">
         <span>{{user.username}}</span>
         <button ng-click="logout()">Logout</button>
     </div>
@@ -8,10 +8,9 @@
 <div id="wrapper">
     <div class="row">
         <div class="col-md-2">
-            <div data-public-sidebar data-ng-if="isLoggedIn">
-
+            <div data-public-sidebar data-ng-if="!isLoggedIn">
             </div>
-            <div data-user-sidebar data-ng-if="!isLoggedIn">
+            <div data-user-sidebar data-ng-if="isLoggedIn">
 
             </div>
         </div>

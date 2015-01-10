@@ -4,9 +4,9 @@
     $scope.login = function (user) {
         userData.login(user)
             .$promise
-            .then(function (data) { 
-                $location.path('/');
-            });
+            .then(function (data) {
+                $location.path('/user/home');
+        });
     }
 		
 }]);

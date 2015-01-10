@@ -16,19 +16,21 @@
 
         resource.$promise
             .then(function (data) {
-            authentication.saveUser(angular.toJson(data));
+                authentication.saveUser(angular.toJson(data));
         });
 
         return resource;
     }
     
-    function logoutUser(user) { 
-        return $resource(baseServiceUrl + serviceUrl + "/logout")
-            .save(user)
-            .$promise
+    function logoutUser(user) {
+        var resource = $resource(baseServiceUrl + serviceUrl + "/logout")
+            .save(user);
+        resource.$promise
             .then(function (data) {
                 authentication.removeUser();
         });
+
+        return resource;
     }
 
     function getAllUsers() {
