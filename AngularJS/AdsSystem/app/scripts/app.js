@@ -9,19 +9,27 @@ adsApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     .when('/', {
         templateUrl: 'templates/home.html',
-        controller: 'HomeController'
+        controller: 'HomeController',
+        pageName: "home",
+        pageTitle: "Home"
     })
     .when('/register', {
         templateUrl: 'templates/register.html',
-        controller: 'RegisterController'
+        controller: 'RegisterController',
+        pageName: "register",
+        pageTitle: "Registration"
     })
     .when('/login', {
         templateUrl: 'templates/login.html',
-        controller: 'LoginController'
+        controller: 'LoginController',
+        pageName: "login",
+        pageTitle: "Login"
     })
     .when('/user/home', {
         templateUrl: 'templates/home.html',
-        controller: 'UserHomeController'
+        controller: 'UserHomeController',
+        pageName: "userHome",
+        pageTitle: "Home"
     })
     .otherwise({ redirectTo: '/' });
     

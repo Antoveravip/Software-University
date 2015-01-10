@@ -1,5 +1,5 @@
 ﻿adsApp.controller('HomeController', ['$scope', 'adsData', 'authentication', function ($scope, adsData, authentication) {
-    $scope.pageTitle = 'Home';
+    //$scope.pageTitle = 'Home';
     $scope.isLoggedIn = authentication.isLoggedIn();
     /*adsData.getAllAds(function (resp) { 
         $scope.data = resp;
