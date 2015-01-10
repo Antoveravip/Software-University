@@ -26,9 +26,15 @@ adsApp.factory('authentication', function () {
         return headers;
     }
     
+    function isLoggedIn() {
+        var isUserLoggedIn = !!getUserData();
+
+        return isUserLoggedIn;
+    }
+    
     function isUserRoleAdmin(user) {
         var isAdmin = getUserData().isAdmin;
-
+        
         return isAdmin;
     }
 
@@ -37,6 +43,7 @@ adsApp.factory('authentication', function () {
         getUser: getUserData,
         removeUser: removeUserData,
         getHeaders: getHeaders,
+        isLoggedIn: isLoggedIn,
         isAdmin: isUserRoleAdmin
     };
 

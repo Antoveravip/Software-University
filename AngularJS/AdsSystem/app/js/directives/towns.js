@@ -2,7 +2,7 @@
     return {
         controller: 'TownsController',
         restrict: 'AE',
-        templateUrl: 'templates/public/towns.html',
+        templateUrl: 'templates/directives/towns.html',
         replace: true,
     };
 });

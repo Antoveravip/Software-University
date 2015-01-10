@@ -1,10 +1,17 @@
 ﻿<header>
     <h1>Ads - {{pageTitle}}</h1>
+    <div >
+        <span>{{user.username}}</span>
+        <button ng-click="logout()">Logout</button>
+    </div>
 </header>
 <div id="wrapper">
     <div class="row">
         <div class="col-md-2">
-            <div data-left-public-sidebar>
+            <div data-public-sidebar data-ng-if="isLoggedIn">
+
+            </div>
+            <div data-user-sidebar data-ng-if="!isLoggedIn">
 
             </div>
         </div>

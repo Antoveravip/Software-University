@@ -2,7 +2,7 @@
     return {
         controller: 'CategoriesController',
         restrict: 'AE',
-        templateUrl: 'templates/public/categories.html',
+        templateUrl: 'templates/directives/categories.html',
         replace: true,
     };
 });

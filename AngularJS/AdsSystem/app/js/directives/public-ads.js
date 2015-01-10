@@ -2,7 +2,7 @@
     return {
         controller: 'PublicAdsController',
         restrict: 'AE',
-        templateUrl: 'templates/public/public-ads.html',
+        templateUrl: 'templates/directives/public-ads.html',
         replace: true,
     };
 });

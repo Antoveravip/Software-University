@@ -19,6 +19,10 @@ adsApp.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'templates/login.html',
         controller: 'LoginController'
     })
+    .when('/user/home', {
+        templateUrl: 'templates/home.html',
+        controller: 'UserHomeController'
+    })
     .otherwise({ redirectTo: '/' });
     
     // Web storage settings
