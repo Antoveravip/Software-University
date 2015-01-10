@@ -1,5 +1,6 @@
-﻿<div id="categories">
+﻿<section id="categories">
+    <h3>Categories</h3>
     <ul>
-        <li ng-repeat="category in categories">{{category.name}}</li>
+        <li data-ng-repeat="category in categories" data-ng-click="categoryClicked(category)">{{category.name}}</li>
     </ul>
-</div>
+</section>

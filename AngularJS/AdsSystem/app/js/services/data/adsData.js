@@ -4,8 +4,8 @@
         update: { method: 'PUT' }
     });
     
-    function getAllAds() {
-        return resource.get();
+    function getAllAds(filterParams) {
+        return resource.get(filterParams);
     }
     
     function editAd(adId, ad) {
