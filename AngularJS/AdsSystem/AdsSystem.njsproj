@@ -33,12 +33,17 @@
     <Compile Include="app\js\app.js" />
     <Compile Include="app\js\controllers\HomeController.js" />
     <Compile Include="app\js\controllers\LoginController.js" />
+    <Compile Include="app\js\controllers\PublicAdsController.js" />
     <Compile Include="app\js\controllers\RegisterController.js" />
     <Compile Include="app\js\directives\categories.js" />
     <Compile Include="app\js\directives\left-public-sidebar.js" />
     <Compile Include="app\js\directives\public-ads.js" />
     <Compile Include="app\js\directives\towns.js" />
+    <Compile Include="app\js\services\authentication.js" />
+    <Compile Include="app\js\services\data\adsData.js" />
     <Compile Include="app\js\services\data\townsData.js" />
+    <Compile Include="app\js\services\data\userData.js" />
+    <Compile Include="app\lib\angular-local-storage\angular-local-storage.js" />
     <Compile Include="app\lib\angular\angular-animate.js" />
     <Compile Include="app\lib\angular\angular-animate.min.js" />
     <Compile Include="app\lib\angular\angular-cookies.js" />
@@ -301,6 +306,8 @@
     <Compile Include="app\lib\angular\i18n\angular-locale_zh.js" />
     <Compile Include="app\lib\angular\i18n\angular-locale_zu-za.js" />
     <Compile Include="app\lib\angular\i18n\angular-locale_zu.js" />
+    <Compile Include="app\lib\angular\ui-bootstrap.js" />
+    <Compile Include="app\lib\angular\ui-bootstrap.min.js" />
     <Compile Include="scripts\web-server.js" />
     <Compile Include="server.js" />
     <Content Include="app\css\.gitkeep" />
@@ -325,7 +332,7 @@
     <Content Include="app\templates\all-ads.html" />
     <Content Include="app\templates\home.html" />
     <Content Include="app\templates\login.html" />
-    <Content Include="app\templates\public\ads.html" />
+    <Content Include="app\templates\public\public-ads.html" />
     <Content Include="app\templates\public\categories.html" />
     <Content Include="app\templates\public\left-sidebar.html" />
     <Content Include="app\templates\public\towns.html" />
@@ -352,6 +359,7 @@
     <Folder Include="app\js\services\" />
     <Folder Include="app\js\services\data\" />
     <Folder Include="app\lib\" />
+    <Folder Include="app\lib\angular-local-storage\" />
     <Folder Include="app\lib\angular\" />
     <Folder Include="app\lib\angular\i18n\" />
     <Folder Include="app\lib\bootstrap\" />

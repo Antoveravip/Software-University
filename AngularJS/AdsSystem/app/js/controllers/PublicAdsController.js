@@ -2,6 +2,6 @@
     adsData.getAds()
     .$promise
     .then(function (data) {
-        $scope.ads = data;
+        $scope.adsData = data;
     });		
 }]);
