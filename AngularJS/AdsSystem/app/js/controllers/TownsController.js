@@ -1,4 +1,4 @@
-﻿adsApp.controller('TownsController', ['$scope', 'townsData', function ($scope, townsData) {
+﻿adsApp.controller('TownsController', ['$scope', '$rootScope', 'townsData', 'filter', function ($scope, $rootScope, townsData, filter) {
     // $scope.towns = townsData.getTowns();
     townsData.getTowns()
         .$promise
@@ -7,4 +7,9 @@
             }, function (error) {
                 console.log(error);
         });
+
+    $scope.townClicked = function (town) {
+        filter.filterByTown(town);
+        $rootScope.$broadcast('townClicked', town);
+    }
 }]);
