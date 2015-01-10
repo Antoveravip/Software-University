@@ -1,7 +1,7 @@
 ﻿adsApp.controller('PublicAdsController', ['$scope', 'adsData', function ($scope, adsData) {
-    
-    $scope.login = function (user) {
-        userData.login(user);
-    }
-		
+    adsData.getAds()
+    .$promise
+    .then(function (data) {
+        $scope.ads = data;
+    });		
 }]);

@@ -16,8 +16,14 @@ adsApp.factory('authentication', function () {
         localStorage.removeItem(key);
     }
     
-    function removeUserData() {
-        localStorage.removeItem(key);
+    function getHeaders() {
+        var headers = {};
+        var userData = getUserData();
+        if (userData) { 
+            headers.Authorization = 'Bearer ' + userData.access_token;
+        }
+
+        return headers;
     }
     
     function isUserRoleAdmin(user) {
