@@ -31,18 +31,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\js\app.js" />
+    <Compile Include="app\js\controllers\CategoriesController.js" />
     <Compile Include="app\js\controllers\HomeController.js" />
     <Compile Include="app\js\controllers\LoginController.js" />
     <Compile Include="app\js\controllers\PublicAdsController.js" />
     <Compile Include="app\js\controllers\RegisterController.js" />
+    <Compile Include="app\js\controllers\TownsController.js" />
+    <Compile Include="app\js\controllers\UserHomeController.js" />
     <Compile Include="app\js\directives\categories.js" />
-    <Compile Include="app\js\directives\left-public-sidebar.js" />
+    <Compile Include="app\js\directives\public-sidebar.js" />
     <Compile Include="app\js\directives\public-ads.js" />
     <Compile Include="app\js\directives\towns.js" />
+    <Compile Include="app\js\directives\user-sidebar.js" />
     <Compile Include="app\js\services\authentication.js" />
     <Compile Include="app\js\services\data\adsData.js" />
+    <Compile Include="app\js\services\data\categoriesData.js" />
     <Compile Include="app\js\services\data\townsData.js" />
     <Compile Include="app\js\services\data\userData.js" />
+    <Compile Include="app\js\services\filter.js" />
     <Compile Include="app\lib\angular-local-storage\angular-local-storage.js" />
     <Compile Include="app\lib\angular\angular-animate.js" />
     <Compile Include="app\lib\angular\angular-animate.min.js" />
@@ -306,13 +312,14 @@
     <Compile Include="app\lib\angular\i18n\angular-locale_zh.js" />
     <Compile Include="app\lib\angular\i18n\angular-locale_zu-za.js" />
     <Compile Include="app\lib\angular\i18n\angular-locale_zu.js" />
+    <Compile Include="app\lib\angular\pagination.js" />
     <Compile Include="app\lib\angular\ui-bootstrap.js" />
     <Compile Include="app\lib\angular\ui-bootstrap.min.js" />
     <Compile Include="scripts\web-server.js" />
     <Compile Include="server.js" />
-    <Content Include="app\css\.gitkeep" />
     <Content Include="app\css\bootstrap.css" />
     <Content Include="app\css\styles.css" />
+    <Content Include="app\images\circle-loading-animation.gif" />
     <Content Include="app\index.html" />
     <Content Include="app\lib\angular\angular-animate.min.js.map" />
     <Content Include="app\lib\angular\angular-cookies.min.js.map" />
@@ -332,11 +339,13 @@
     <Content Include="app\templates\all-ads.html" />
     <Content Include="app\templates\home.html" />
     <Content Include="app\templates\login.html" />
-    <Content Include="app\templates\public\public-ads.html" />
-    <Content Include="app\templates\public\categories.html" />
-    <Content Include="app\templates\public\left-sidebar.html" />
-    <Content Include="app\templates\public\towns.html" />
+    <Content Include="app\templates\directives\public-ads.html" />
+    <Content Include="app\templates\directives\categories.html" />
+    <Content Include="app\templates\directives\public-sidebar.html" />
+    <Content Include="app\templates\directives\towns.html" />
+    <Content Include="app\templates\pagination\pagination.html" />
     <Content Include="app\templates\register.html" />
+    <Content Include="app\templates\directives\user-sidebar.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="scripts\e2e-test.bat" />
@@ -353,6 +362,7 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\css\" />
+    <Folder Include="app\images\" />
     <Folder Include="app\js\" />
     <Folder Include="app\js\controllers\" />
     <Folder Include="app\js\directives\" />
@@ -364,7 +374,8 @@
     <Folder Include="app\lib\angular\i18n\" />
     <Folder Include="app\lib\bootstrap\" />
     <Folder Include="app\templates\" />
-    <Folder Include="app\templates\public\" />
+    <Folder Include="app\templates\directives\" />
+    <Folder Include="app\templates\pagination\" />
     <Folder Include="scripts\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
