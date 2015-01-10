@@ -5,17 +5,27 @@
         return $resource(baseServiceUrl + serviceUrl + "/register")
             .save(user)
             .$promise
-            .then(function (data) { 
-                authentication.saveUser(angular.toJson(data));        
+            .then(function (data) {
+                authentication.saveUser(angular.toJson(data));
              });
     }
     
     function loginUser(user) { 
-    
+        return $resource(baseServiceUrl + serviceUrl + "/login")
+            .save(user)
+            .$promise
+            .then(function (data) {
+                authentication.saveUser(angular.toJson(data)); 
+            });
     }
     
     function logoutUser(user) { 
-    
+        return $resource(baseServiceUrl + serviceUrl + "/logout")
+            .save(user)
+            .$promise
+            .then(function (data) {
+                authentication.removeUser();
+        });
     }
 
     function getAllUsers() {

@@ -1,6 +1,6 @@
-﻿adsApp.controller('HomeController', function ($scope, adsData, $log) {
+﻿adsApp.controller('HomeController', function ($scope) {
     $scope.pageTitle = 'Home';
-
+    /*
     adsData.getAllAds(function (resp) { 
         $scope.data = resp;
     })
@@ -10,5 +10,5 @@
     adsData.getAllCategories(function (resp) {
         $scope.categories = resp;
     })
-		
+		*/
 });

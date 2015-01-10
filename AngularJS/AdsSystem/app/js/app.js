@@ -1,8 +1,10 @@
 'use strict';
+//var adsApp = angular.module('adsApp', ['ngRoute', 'ngResource', 'LocalStorageModule']);
 var adsApp = angular.module('adsApp', ['ngRoute', 'ngResource']);
 
 adsApp.constant('baseServiceUrl', 'http://softuni-ads.azurewebsites.net/api/');
 
+//adsApp.config(['$routeProvider', 'localStorageServiceProvider', function ($routeProvider, localStorageServiceProvider) {
 adsApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
     .when('/', {
@@ -17,5 +19,8 @@ adsApp.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'templates/login.html',
         controller: 'LoginController'
     })
-    .otherwise({redirectTo: '/'});
+    .otherwise({ redirectTo: '/' });
+    
+    // Web storage settings
+    //localStorageServiceProvider.setStorageType('sessionStorage');
 }]);

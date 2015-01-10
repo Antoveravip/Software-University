@@ -1,4 +1,4 @@
-﻿adsApp.factory('adsData', function ($http, $log) {
+﻿/*adsApp.factory('adsData', function ($http, $log) {
     var base = 'http://softuni-ads.azurewebsites.net/api/';
     var pageSize = 10;
     var startPage = 1;
@@ -48,4 +48,4 @@
         getAllCategories: getAllCategories,
     }
         
-});
+});*/
