@@ -1,6 +1,11 @@
-﻿<section id="towns">
-    <h3>Towns</h3>
-    <ul>
-        <li data-ng-repeat="town in towns" data-ng-click="townClicked(town)">{{town.name}}</li>
-    </ul>
+﻿<section id="towns" class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Towns</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="initial" ng-class="{active: selectedTownId == null}" ng-click="townClicked(null)"><a>All</a></li>
+            <li data-ng-repeat="town in towns" data-ng-class="{active: townId == town.id}" data-ng-click="townClicked(town)"><a>{{town.name}}</a></li>
+        </ul>
+    </div>
 </section>

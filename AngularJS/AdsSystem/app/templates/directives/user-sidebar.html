@@ -3,19 +3,11 @@
         <header>
             <h2>Navigation</h2>
         </header>
-        <ul>
-            <li>
-                <a href="#/user/home">Home</a>
-            </li>
-            <li>
-                <a href="#/user/ads">My Ads</a>
-            </li>
-            <li>
-                <a href="#/user/ads/publish">Publish New Ad</a>
-            </li>
-            <li>
-                <a href="#/user/profile">Edit Profile</a>
-            </li>
+        <ul class="nav nav-pills nav-stacked">
+            <li data-ng-class="{active: $route.current.pageName == 'userHome'}"><a href="#/user/home">Home</a></li>
+            <li data-ng-class="{active: $route.current.pageName == 'userAds'}"><a href="#/user/ads">My Ads</a></li>
+            <li data-ng-class="{active: $route.current.pageName == 'userPublish'}"><a href="#/user/ads/publish">Publish New Ad</a> </ling-class>
+            <li data-ng-class="{active: $route.current.pageName == 'userProfile'}"><a href="#/user/profile">Edit Profile</a></li>
         </ul>
     </nav>
 </div>
