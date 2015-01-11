@@ -1,7 +1,7 @@
 ﻿adsApp.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', function ($resource, baseServiceUrl, authentication) {
     var serviceUrl = 'user';
     
-    function registerUser(user) {
+    function registerUser(user, success, error) {
         return $resource(baseServiceUrl + serviceUrl + "/register")
             .save(user)
             .$promise
@@ -10,7 +10,7 @@
              });
     }
     
-    function loginUser(user) {
+    function loginUser(user, success, error) {
         var resource = $resource(baseServiceUrl + serviceUrl + "/login")
             .save(user);
 

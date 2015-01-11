@@ -1,34 +1,70 @@
-﻿adsApp.factory('adsData', ['$resource', 'baseServiceUrl', function ($resource, baseServiceUrl) {
+﻿adsApp.factory('adsData', ['$resource', 'baseServiceUrl', 'authentication', function ($resource, baseServiceUrl, authentication) {
     var serviceUrl = 'ads';
-    var resource = $resource(baseServiceUrl + serviceUrl + ':adId', { adId: '@id' }, {
-        update: { method: 'PUT' }
+    var userServiceUrl = 'user/ads'
+
+    var adsResource = $resource(baseServiceUrl + serviceUrl, null, {
+        "all": {
+            method: "GET"
+        }
     });
     
-    function getAllAds(params) {
-        return resource.get(params);
+    var userAdsResource = $resource(baseServiceUrl + userServiceUrl + ":id", null, {
+        "publish": {
+            method: "POST",
+            headers: authentication.getHeaders()
+        },
+        "userAds": {
+            method: "GET",
+            headers: authentication.getHeaders(),
+        },
+        "deactivate": {
+            method: "PUT",
+            url: baseServiceUrl + userServiceUrl + "deactivate/:id",
+            params: { id: "@id" },
+            headers: authentication.getHeaders()
+        },
+        "update": {
+            method: "PUT",
+            params: { id: "@id" },
+            headers: authentication.getHeaders()
+        },
+        "delete": {
+            method: "DELETE",
+            params: { id: "@id" },
+            headers: authentication.getHeaders()
+        }
+    });
+
+    function getAllAds(params, success, error) {
+        return adsResource.all(params, success, error);
     }
     
-    function editAd(adId, ad) {
-        return resource.update({ id: adId }, ad);
+    function deactivateAdById(id, success, error) {
+        return userAdsResource.deactivate({ id: id }, success, error);
     }
     
-    function getAdById(adId) {
-        return resource.get({ id: adId });
+    function getUserAds(params, success, error) {
+        return userAdsResource.userAds(params, success, error);
     }
     
-    function addAd(ad) { 
-        return resource.save(ad);
+    function addAd(ad, success, error) {
+        return userAdsResource.publish(ad, success, error);
     }
     
-    function deletAd(adId) { 
-        return resource.delete({ id: adId });
+    function updateAd(ad, success, error) {
+        return userAdsResource.update(ad, success, error);
     }
-    
+
+    function deletAd(ad, success, error) {
+        return userAdsResource.delete(ad, success, error);
+    }
+        
     return {
         add: addAd, // Create
         getAds: getAllAds, // Read
-        getAdById: getAdById, // Read
-        edit: editAd, // Update
-        delete: deletAd // Delete
+        getUserAds: getUserAds, // Read
+        updateAd: updateAd, // Update
+        deactivate: deactivateAdById, // Update
+        deleteAd: deletAd // Delete
     };
 }]);

@@ -1,0 +1,55 @@
+﻿<div data-main-header></div>
+<div id="wrapper">
+    <div class="row">
+        <div class="col-md-2">
+            <div data-user-sidebar></div>
+        </div>
+        <div class="col-md-8">
+            <alert ng-repeat="notification in notifications" type="{{notification.type}}" close="notification.close($index)">
+                <span ng-bind-html="notification.msg"></span>
+            </alert>
+            <section id="user-ads">
+                <section data-ng-cloak>
+                    <article class="row" data-ng-repeat="ad in adsData.ads">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3>
+                                    <strong>{{ ad.title }}</strong>
+                                    <span class="pull-right">{{ ad.date | date: 'd-MMM-yyyy' }}</span>
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="" alt="{{ ad.title }}" ng-src="{{ ad.imageDataUrl }}" class="ads-image" />
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="well">{{ ad.text }}</div>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Category: {{ ad.categoryName || "(None)" }}</li>
+                                            <li class="list-group-item">Town: {{ ad.townName || "(None)" }}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3 text-center">
+                                        <span>Status:</span>
+                                        <div class="well text-center">{{ ad.status }}</div>
+                                        <button class="btn btn-block btn-lg btn-danger" ng-if="ad.status != 'Inactive' && ad.status != 'Rejected'"
+                                                ng-click="deactivateAd(ad.id)">
+                                            Deactivate
+                                        </button>
+                                        <div ng-if="ad.status == 'Inactive' || ad.status == 'Rejected'">
+                                            <a href="#/user/edit/{{ad.id}}" class="btn btn-block btn-lg btn-primary">Edit</a>
+                                            <button class="btn btn-block btn-lg btn-primary" ng-click="publish(ad.id)">Publish again</button>
+                                            <a href="#/user/delete/{{ad.id}}" class="btn btn-block btn-lg btn-danger">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <div data-pagination data-total-items="adsData.numItems" data-ng-model="parameters.startPage" data-items-per-page="parameters.pageSize" data-ng-change="loadUserAds()" data-boundary-links="true"></div>
+                </section>
+            </section>
+        </div>
+    </div>
+</div>

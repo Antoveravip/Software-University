@@ -24,9 +24,39 @@ adsApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
         })
         .when('/user/home', {
             templateUrl: 'templates/home.html',
-            controller: 'UserHomeController',
+            controller: 'UserController',
             pageName: 'userHome',
             pageTitle: 'Home'
+        })
+        .when('/user/ads', {
+            templateUrl: 'templates/user/user-ads.html',
+            controller: 'UserController',
+            pageName: 'userAds',
+            pageTitle: 'My Ads'
+        })
+        .when('/user/ads/publish', {
+            templateUrl: 'templates/user/publish-new-ad.html',
+            controller: 'UserController',
+            pageName: 'publish',
+            pageTitle: 'Publish New Ad'
+        })
+        .when('/user/ads/edit/:id', {
+            templateUrl: 'templates/user/edit-ad.html',
+            controller: 'UserController',
+            pageName: 'userEditAd',
+            pageTitle: 'Edit'
+        })
+        .when('/user/ads/delete/:id', {
+            templateUrl: 'templates/user/delete-ad.html',
+            controller: 'UserController',
+            pageName: 'userDeleteAd',
+            pageTitle: 'Delete'
+        })
+        .when('/user/profile', {
+            templateUrl: 'templates/profile.html',
+            controller: 'UserController',
+            pageName: 'userProfile',
+            pageTitle: 'Profile'
         })
         .otherwise({ redirectTo: '/' });
 
@@ -44,8 +74,8 @@ adsApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, 
                 }
             });
             $rootScope.$on("$routeChangeStart", function (event, next, current) {
-                if ($rootScope.isLoggedIn == true) {
-                    // is user, redirect to /user
+                if (authentication.isLoggedIn() == true) {
+                    // is user, redirect to /user/home
                     if (next.templateUrl === "templates/home.html") {
                         $location.path("/user/home");
                     } else if (next.templateUrl === "templates/login.html") {

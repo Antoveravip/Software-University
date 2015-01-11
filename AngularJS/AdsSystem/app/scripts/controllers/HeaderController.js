@@ -1,5 +1,6 @@
 ﻿adsApp.controller('HeaderController', ['$scope', '$rootScope', '$route', '$location', 'userData', 'authentication', function ($scope, $rootScope, $route, $location, userData, authentication) {
     $scope.pageTitle = $route.current.pageTitle;
+    $scope.pageName = $route.current.pageName;
     $scope.isLoggedIn = authentication.isLoggedIn();
     $scope.user = authentication.getUser();
 

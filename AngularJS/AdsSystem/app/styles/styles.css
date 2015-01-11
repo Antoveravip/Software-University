@@ -14,3 +14,7 @@
 .main {
     height: 100%;
 }
+.image-box > img {
+    max-width: 150px;
+    max-height: 150px;
+}

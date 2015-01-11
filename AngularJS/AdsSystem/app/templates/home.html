@@ -6,9 +6,10 @@
             <div data-user-sidebar data-ng-if="isLoggedIn"></div>
         </div>
         <div class="col-md-8">
-            <div data-public-ads>
-
-            </div>
+            <alert ng-repeat="notification in notifications" type="{{notification.type}}" close="notification.close($index)">
+                <span ng-bind-html="notification.msg"></span>
+            </alert>
+            <div data-public-ads></div>
         </div>
         <aside class="col-md-2">
             <div data-categories></div>

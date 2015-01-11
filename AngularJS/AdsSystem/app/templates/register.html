@@ -1,9 +1,11 @@
-﻿<div class="col-md-2">
-    <div data-left-public-sidebar>
-
-    </div>
+﻿<div data-main-header></div>
+<div class="col-md-2">
+    <div data-public-sidebar></div>
 </div>
 <div class="col-md-10 well bs-component">
+    <alert ng-repeat="notification in notifications" type="{{notification.type}}" close="notification.close($index)">
+        <span ng-bind-html="notification.msg"></span>
+    </alert>
     <form class="form-horizontal">
         <fieldset>
             <legend>User Registration</legend>
