@@ -1,23 +1,30 @@
 ﻿adsApp.factory('filter', function () {
-    var params = {};
+    var params = {
+        startPage: 1,
+        pageSize: 10
+    };
     
     function getParams() { 
         return params;
     }
 
     function filterByCategory(category) {
-        if (category == null) { 
+        if (category == null) {
             params.categoryId = null;
-        } else { 
+            params.startPage = 1;
+        } else {
             params.categoryId = category.id;
+            params.startPage = 1;
         }        
     }
     
     function filterByTown(town) {
         if (town == null) {
             params.townId = null;
+            params.startPage = 1;
         } else {
             params.townId = town.id;
+            params.startPage = 1;
         }        
     }
     

@@ -1,28 +1,26 @@
 ﻿adsApp.controller('PublicAdsController', ['$scope', 'adsData', 'filter', function ($scope, adsData, filter) {
+    $scope.parameters = filter.getParams();
+
     $scope.ready = false;
     
-    $scope.currentPage = 1;
-    $scope.startPage = 1;
-    $scope.pageSize = 5;
-
-    function loadAds(params) {
-        params = params || {};
-
-        adsData.getAds(params)
+    $scope.loadAds = function() {
+        adsData.getAds($scope.parameters)
             .$promise
             .then(function (data) {
                 $scope.adsData = data;
                 $scope.ready = true;
-            });	    
+            });
     }
+    
+    $scope.loadAds();
 
-    loadAds();
-
-    $scope.$on('categoryClicked', function (event, category) { 
-        loadAds(filter.getParams());
+    $scope.$on('categoryClicked', function (event, category) {
+        $scope.parameters = filter.getParams();
+        $scope.loadAds();
     });
 
     $scope.$on('townClicked', function (event, town) {
-        loadAds(filter.getParams());
+        $scope.parameters = filter.getParams();
+        $scope.loadAds();
     });
 }]);

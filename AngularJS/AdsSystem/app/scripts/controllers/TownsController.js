@@ -13,6 +13,8 @@
     $scope.townClicked = function (town) {
         if (town != null) {
             $scope.townId = town.id;
+        } else { 
+            $scope.townId = null;
         }
         filter.filterByTown(town);
         $rootScope.$broadcast('townClicked', town);

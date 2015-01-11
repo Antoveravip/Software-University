@@ -9,8 +9,10 @@
         });
 
     $scope.categoryClicked = function categoryClicked(category) {
-        if (category != null) { 
+        if (category != null) {
             $scope.categoryId = category.id;
+        } else { 
+            $scope.categoryId = null;
         }
         filter.filterByCategory(category);
         $rootScope.$broadcast('categoryClicked', category);

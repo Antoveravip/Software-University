@@ -47,6 +47,6 @@
                 </div>
             </div>
         </article>
-        <div data-pagination page="startPage" data-ng-model="currentPage" items-per-page="pageSize" total-items="adsData.numItems" data-ng-change="pageChanged()" boundary-links="true"></div>
+        <div data-pagination data-total-items="adsData.numItems" data-ng-model="parameters.startPage" data-items-per-page="parameters.pageSize" data-ng-change="loadAds()" data-boundary-links="true"></div>
     </section>
 </section>

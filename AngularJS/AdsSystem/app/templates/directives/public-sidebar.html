@@ -3,15 +3,15 @@
         <header>
             <h2>Navigation</h2>
         </header>
-        <ul>
-            <li>
-                <a href="#/">Home</a>
-            </li>
+        <ul class="nav nav-pills nav-stacked">
+            <li data-ng-class="{active: $route.current.pageName == 'home'}"><a href="#/">Home</a></li>
         </ul>
     </nav>
     <div>
         <p>To publish a new ad, please login.</p>
-        <a href="#/login">Login</a>
-        <a href="#/register">Register</a>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="#/login">Login</a></li>
+            <li><a href="#/register">Register</a></li>
+        </ul>
     </div>
 </div>
