@@ -2,10 +2,16 @@
 session_start();
 require_once('includes/config.php');
 
+define( 'DX_DS', '/' );
+define( 'DX_ROOT_DIR', dirname( __FILE__ ) . DX_DS );
+define( 'DX_ROOT_PATH', basename( dirname( __FILE__ ) ) . DX_DS );
+define( 'DX_ROOT_URL', 'http://' . $_SERVER['HTTP_HOST'] . DX_DS . 'blog/' );
+var_dump(DX_ROOT_URL);
 // Define the request home that will always persist in REQUEST_URI
-$request_home = DX_ROOT_URL;
+$request_home = DX_DS . DX_ROOT_PATH;
+//$request_home = DX_ROOT_URL;
 $request = $_SERVER['REQUEST_URI'];
-$request = str_replace("/blog/","/",$request);
+//$request = str_replace("/blog/","",$request);
 $requestParts = array();
 $controllerName = DEFAULT_CONTROLLER;
 $actionName = DEFAULT_ACTION;
@@ -35,43 +41,20 @@ if ( ! empty( $request ) ) {
 
         // Fetch the controller, method and params if any
         $requestParts = explode( DX_DS, $request, 3 );
+        $requestParts = array_filter($requestParts);
         var_dump($requestParts);
         // Get controller and such
-        if ( 1 < count( $requestParts ) ) {
-            list( $controllerName, $action ) = $requestParts;
+        if ( 1 < count($requestParts) ) {
+            list( $controllerName, $actionName ) = $requestParts;
 
             $params = isset( $requestParts[2] ) ? $requestParts[2] : array();
+        } else {
+            $controllerName = isset($requestParts[0]) ? $requestParts[0] : DEFAULT_CONTROLLER;
         }
 
         var_dump($params);
     }
 }
-
-
-/*$requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-var_dump($requestPath);
-$requestParts = explode('/', $requestPath);
-var_dump($requestParts);*/
-$controllerName = DEFAULT_CONTROLLER;
-if (count($requestParts) >= 3 && $requestParts[2] != '') {
-    $controllerName = strtolower($requestParts[2]);
-    if (! preg_match('/^[a-zA-Z0-9_]+$/', $controllerName)) {
-        die('Invalid controller name. Use letters, digits and underscore only.');
-    }
-}
-$actionName = DEFAULT_ACTION;
-if (count($requestParts) >= 4 && $requestParts[3] != '') {
-    $actionName = $requestParts[3];
-    if (! preg_match('/^[a-zA-Z0-9_]+$/', $actionName)) {
-        die('Invalid action name. Use letters, digits and underscore only.');
-    }
-}
-$params = [];
-if (count($requestParts) >= 5) {
-    $params = array_splice($requestParts, 4);
-}
-
-
 
 $controllerClassName = ucfirst(strtolower($controllerName)) . 'Controller';
 $controllerFileName = "controllers/" . $controllerClassName . '.php';
@@ -84,7 +67,7 @@ if (class_exists($controllerClassName)) {
 
 if (method_exists($controller, $actionName)) {
     //$controller->{$action}($params);
-    call_user_func_array(array($controller, $actionName), $params);
+    call_user_func_array(array($controller, $actionName),  array($params));
     $controller->renderView();
 } else {
     die("Cannot find action '$actionName' in controller '$controllerClassName'");

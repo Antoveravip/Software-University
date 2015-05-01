@@ -3,7 +3,7 @@
 class PostsModel extends BaseModel {
     public function getAll() {
         $statement = self::$db->query(
-            "SELECT p.id, p.title, p.published, p.content, p.view, p.user_id, u.username, p.category_id,
+            "SELECT p.id, p.title, p.published, p.content, p.views, p.user_id, u.username, p.category_id,
                   c.name AS category, p.status_id, s.name as status
                 FROM posts p
                     LEFT JOIN categories c ON p.category_id = c.id
@@ -14,7 +14,7 @@ class PostsModel extends BaseModel {
     }
 
     public function getPost($id) {
-        $statement = self::$db->prepare("SELECT p.id, p.title, p.published, p.content, p.view, p.user_id, u.username, p.category_id,
+        $statement = self::$db->prepare("SELECT p.id, p.title, p.published, p.content, p.views, p.user_id, u.username, p.category_id,
                   c.name AS category, p.status_id, s.name as status
                 FROM posts p
                     LEFT JOIN categories c ON p.category_id = c.id
@@ -28,14 +28,14 @@ class PostsModel extends BaseModel {
         return $row;
     }
 
-    public function createPost($title, $content, $view = 0, $category_id = 1, $status_id = 1) {
+    public function createPost($title, $content, $views = 0, $category_id = 1, $status_id = 1) {
         if ($title == '') {
             return false;
         }
         $published = new DateTime();
         $statement = self::$db->prepare(
             "INSERT INTO posts VALUES(?, ?, ?, ?, ?, ?)");
-        $statement->bind_param("sssiii", $title, $published, $content, $view, $category_id, $status_id);
+        $statement->bind_param("sssiii", $title, $published, $content, $views, $category_id, $status_id);
         $statement->execute();
         return $statement->affected_rows > 0;
     }
@@ -74,6 +74,16 @@ class PostsModel extends BaseModel {
         $statement = self::$db->prepare(
             "UPDATE posts WHERE id = ? SET status_id = ?");
         $statement->bind_param("ii", $id, $status_id);
+        $statement->execute();
+        return $statement->affected_rows > 0;
+    }
+
+    public function updatePostViews($id, $views) {
+        $id = (int)$id;
+        $views = (int)$views;
+        $statement = self::$db->prepare(
+            "UPDATE posts SET views = ? WHERE id = ?");
+        $statement->bind_param("ii", $views, $id);
         $statement->execute();
         return $statement->affected_rows > 0;
     }

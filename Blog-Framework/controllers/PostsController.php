@@ -5,10 +5,10 @@ class PostsController extends BaseController {
 
     public function onInit() {
         $this->title = "Blog";
-        $this->postsModel = new PostsModel();
+        $this->db = new PostsModel();
     }
 
-    public function index($id = null) {
+    public function index() {
         /*if($this->isPost) {
             if(isset($_POST['post_id']) && $_POST['post_id'] != null) {
                 $this->comments = $this->db->getAll($_POST['post_id']);
@@ -20,16 +20,20 @@ class PostsController extends BaseController {
 
         $this->redirect('blog');*/
 
-        $this->posts = $this->postsModel->getAll();
+        $this->posts = $this->db->getAll();
     }
 
-    public function read($id) {
-        if ($id == '' || !is_int((int)$id)) {
+    public function view($id) {
+        if ($id == '' || !is_numeric($id) || !is_int((int)$id)) {
             $this->addErrorMessage("Invalid post id!");
             $this->redirect('posts');
         } else {
-            $post = $this->postsModel->getPost($id);
+            $post = $this->db->getPost($id);
             if($post) {
+                $views = (int)$post['views'];
+                $views = $views + 1;
+                $this->db->updatePostViews($id, $views);
+                $post['views'] = $views;
                 $this->post = $post;
                 $this->title = $post['title'];
             } else {

@@ -1,11 +1,15 @@
 <?php
-if (isset($_SESSION['messages'])) {
-    echo '<ul>';
-    foreach ($_SESSION['messages'] as $msg) {
-        echo '<li class="' . $msg['type'] . '">';
-        echo htmlspecialchars($msg['text']);
-        echo '</li>';
+
+renderMessages(INFO_MESSAGES_SESSION_KEY, 'info-messages');
+renderMessages(ERROR_MESSAGES_SESSION_KEY, 'error-messages');
+
+function renderMessages($messagesKey, $cssClass) {
+    if (isset($_SESSION[$messagesKey]) && count($_SESSION[$messagesKey]) > 0) {
+        echo '<ul class="' . $cssClass . '">';
+        foreach ($_SESSION[$messagesKey] as $msg) {
+            echo "<li>" . htmlspecialchars($msg) . '</li>';
+        }
+        echo '</ul>';
     }
-    echo '</ul>';
-    unset($_SESSION['messages']);
+    $_SESSION[$messagesKey] = [];
 }

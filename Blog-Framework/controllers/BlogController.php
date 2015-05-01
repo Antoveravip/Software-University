@@ -1,8 +1,8 @@
 <?php
 
-class HomeController extends BaseController {
+class BlogController extends BaseController {
     public function onInit() {
-        $this->title = "Home";
+        $this->title = "Project";
     }
 
     public function index() {

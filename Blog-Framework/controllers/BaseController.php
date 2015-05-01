@@ -55,7 +55,7 @@ abstract class BaseController {
 
     public function redirect(
         $controllerName, $actionName = null, $params = null) {
-        $url = '/' . urlencode($controllerName);
+        $url = DX_ROOT_URL . urlencode($controllerName);
         if ($actionName != null) {
             $url .= '/' . urlencode($actionName);
         }
@@ -66,19 +66,19 @@ abstract class BaseController {
         $this->redirectToUrl($url);
     }
 
-    function addMessage($msg, $type) {
-        if (!isset($_SESSION['messages'])) {
-            $_SESSION['messages'] = array();
-        };
-        array_push($_SESSION['messages'],
-            array('text' => $msg, 'type' => $type));
+    private function addMessage($msgSessionkey, $msgText) {
+        if (!isset($_SESSION[$msgSessionkey])) {
+            $_SESSION[$msgSessionkey] = [];
+        }
+        array_push($_SESSION[$msgSessionkey], $msgText);
+
     }
 
-    function addInfoMessage($msg) {
-        $this->addMessage($msg, 'info');
+    protected function addErrorMessage($errorMsg) {
+        $this->addMessage(ERROR_MESSAGES_SESSION_KEY, $errorMsg);
     }
 
-    function addErrorMessage($msg) {
-        $this->addMessage($msg, 'error');
+    protected function addInfoMessage($infoMsg) {
+        $this->addMessage(INFO_MESSAGES_SESSION_KEY, $infoMsg);
     }
 }
