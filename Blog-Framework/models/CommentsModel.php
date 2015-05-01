@@ -1,9 +1,10 @@
 <?php
 
 class CommentsModel extends BaseModel {
-    public function getAll() {
-        $statement = self::$db->query(
-            "SELECT * FROM comments ORDER BY id");
+    public function getAll($id) {
+        $statement = self::$db->prepare("SELECT * FROM comments WHERE post_id = ? ORDER BY id");
+        $statement->bind_param("i", $id);
+        $statement->execute();
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 

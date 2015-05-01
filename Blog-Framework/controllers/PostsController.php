@@ -1,15 +1,15 @@
 <?php
 
-class CommentsController extends BaseController {
+class PostsController extends BaseController {
     private $db;
 
     public function onInit() {
-        $this->title = "Comments";
-        $this->db = new CommentsModel();
+        $this->title = "Blog";
+        $this->postsModel = new PostsModel();
     }
 
-    public function index() {
-        if($this->isPost) {
+    public function index($id = null) {
+        /*if($this->isPost) {
             if(isset($_POST['post_id']) && $_POST['post_id'] != null) {
                 $this->comments = $this->db->getAll($_POST['post_id']);
             } else {
@@ -17,8 +17,28 @@ class CommentsController extends BaseController {
             }
         }
 
-        $this->redirect('blog');
+
+        $this->redirect('blog');*/
+
+        $this->posts = $this->postsModel->getAll();
     }
+
+    public function read($id) {
+        if ($id == '' || !is_int((int)$id)) {
+            $this->addErrorMessage("Invalid post id!");
+            $this->redirect('posts');
+        } else {
+            $post = $this->postsModel->getPost($id);
+            if($post) {
+                $this->post = $post;
+                $this->title = $post['title'];
+            } else {
+                $this->addErrorMessage("Missing post id!");
+                $this->redirect('posts');
+            }
+        }
+    }
+
 
     public function create() {
         if ($this->isPost) {

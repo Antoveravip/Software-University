@@ -14,6 +14,10 @@ abstract class BaseController {
             $this->isPost = true;
         }
         $this->onInit();
+
+        var_dump($controllerName);
+        var_dump($actionName);
+
     }
 
     public function onInit() {
