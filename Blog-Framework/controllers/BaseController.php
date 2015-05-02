@@ -6,18 +6,37 @@ abstract class BaseController {
     protected $layoutName = DEFAULT_LAYOUT;
     protected $isViewRendered = false;
     protected $isPost = false;
+    protected $isLoggedIn;
+    protected $isAdmin;
+    protected $isEditor;
+    protected $validationErrors;
+    protected $formValues;
+    protected $categories;
+    protected $statuses;
+
 
     function __construct($controllerName, $actionName) {
         $this->controllerName = $controllerName;
         $this->actionName = $actionName;
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $this->isPost = true;
         }
+
+        if (isset($_SESSION['username'])) {
+            $this->isLoggedIn = true;
+        }
+
+        if (isset($_SESSION['admin'])) {
+            $this->isAdmin = true;
+        }
+
+        if (isset($_SESSION['editor'])) {
+            $this->isEditor = true;
+        }
+
+
         $this->onInit();
-
-        var_dump($controllerName);
-        var_dump($actionName);
-
     }
 
     public function onInit() {
@@ -36,12 +55,12 @@ abstract class BaseController {
             $viewFileName = 'views/' . $this->controllerName
                 . '/' . $viewName . '.php';
             if ($includeLayout) {
-                $headerFile = 'views/layouts/header.php';
+                $headerFile = 'views/layouts/' . $this->layoutName . '/header.php';
                 include_once($headerFile);
             }
             include_once($viewFileName);
             if ($includeLayout) {
-                $footerFile = 'views/layouts/footer.php';
+                $footerFile = 'views/layouts/' . $this->layoutName . '/footer.php';
                 include_once($footerFile);
             }
             $this->isViewRendered = true;
@@ -53,17 +72,51 @@ abstract class BaseController {
         die;
     }
 
-    public function redirect(
-        $controllerName, $actionName = null, $params = null) {
+    public function redirect($controllerName, $actionName = null, $params = null) {
         $url = DX_ROOT_URL . urlencode($controllerName);
         if ($actionName != null) {
             $url .= '/' . urlencode($actionName);
         }
         if ($params != null) {
             $encodedParams = array_map($params, 'urlencode');
-            $url .= implode('/', $encodedParams);
+            if($encodedParams) {
+                $url .= implode(DX_DS, $encodedParams);
+            } else {
+                $url .= DX_DS . $params;
+            }
         }
         $this->redirectToUrl($url);
+    }
+
+    public function authorize() {
+        if (! $this->isLoggedIn) {
+            $this->addErrorMessage("Please login first");
+            $this->redirect("account", "login");
+        }
+    }
+
+    public function setAdminLogin($value) {
+        $_SESSION['admin'] = true;
+    }
+
+    public function setEditorLogin($value) {
+        $_SESSION['editor'] = true;
+    }
+
+    public function addValidationError($field, $message) {
+        $this->validationErrors[$field] = $message;
+    }
+
+    public function getValidationError($field) {
+        return $this->validationErrors[$field];
+    }
+
+    public function addFieldValue($field, $value) {
+        $this->formValues[$field] = $value;
+    }
+
+    public function getFieldValue($field) {
+        return $this->formValues[$field];
     }
 
     private function addMessage($msgSessionkey, $msgText) {

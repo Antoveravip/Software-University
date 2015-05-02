@@ -15,14 +15,13 @@ class CommentsModel extends BaseModel {
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function createComment($text, $name, $post_id, $comment_id = null, $email = null, $status_id = 1) {
+    public function createComment($text, $name, $post_id, $email = null, $status_id = 1) {
         if ($text == '' || $name == '' || $post_id == '') {
             return false;
         }
 
-        $statement = self::$db->prepare(
-            "INSERT INTO comments VALUES(?, ?, ?, ?, ?, ?)");
-        $statement->bind_param("sssiii", $name, $email, $text, $post_id, $comment_id, $status_id);
+        $statement = self::$db->prepare("INSERT INTO comments(visitor, email, content, post_id, status_id) VALUES(?, ?, ?, ?, ?)");
+        $statement->bind_param("sssii", $name, $email, $text, $post_id, $status_id);
         $statement->execute();
         return $statement->affected_rows > 0;
     }
@@ -35,7 +34,6 @@ class CommentsModel extends BaseModel {
         }
 
         if($comment->id != null) {
-            var_dump($comment->id);
             deleteComment($comment->id);
         }
 

@@ -28,27 +28,60 @@ class PostsModel extends BaseModel {
         return $row;
     }
 
-    public function createPost($title, $content, $views = 0, $category_id = 1, $status_id = 1) {
+    public function createPost($user_id, $title, $content, $category_id = 1, $status_id = 1, $tags) {
         if ($title == '') {
             return false;
         }
-        $published = new DateTime();
+        $published = (new DateTime())->format('Y-m-d H:i:s');
+        $views = 0;
+        $category_id = (int)$category_id;
+        $status_id = (int)$status_id;
+        $user_id = (int)$user_id;
         $statement = self::$db->prepare(
-            "INSERT INTO posts VALUES(?, ?, ?, ?, ?, ?)");
-        $statement->bind_param("sssiii", $title, $published, $content, $views, $category_id, $status_id);
+            "INSERT INTO posts (title, published, content, views, category_id, status_id, user_id) VALUES(?, ?, ?, ?, ?, ?, ?)");
+        $statement->bind_param("sssiiii", $title, $published, $content, $views, $category_id, $status_id, $user_id);
         $statement->execute();
+        $post_id = $statement->insert_id;
+
+        $allTags = explode(',', $tags);
+        $allTags = array_map('trim', $allTags);
+
+        foreach($allTags as $tag) {
+            $tag_statement = self::$db->prepare("SELECT id, uses FROM tags WHERE name = ?");
+            $tag_statement->bind_param("s", $tag);
+            $tag_statement->execute();
+            $result = $tag_statement->get_result();
+            $output = $result->fetch_assoc();
+            if($output) {
+                $tag_id = $output['id'];
+                $count =  $output['uses'];
+                $count = $count + 1;
+                $insert_tag_statement = self::$db->prepare("UPDATE tags SET uses = ? WHERE id = ?");
+                $insert_tag_statement->bind_param("ii", $count, $tag_id);
+                $insert_tag_statement->execute();
+            } else {
+                $insert_tag_statement = self::$db->prepare("INSERT INTO tags (name, uses) VALUES(?, ?)");
+                $count = 0;
+                $insert_tag_statement->bind_param("si", $tag, $count);
+                $insert_tag_statement->execute();
+                $tag_id = $insert_tag_statement->insert_id;
+            }
+
+            $post_tag_statement = self::$db->prepare("INSERT INTO posts_tags VALUES(?, ?)");
+            $post_tag_statement->bind_param("ii", $post_id, $tag_id);
+            $post_tag_statement->execute();
+        }
+
         return $statement->affected_rows > 0;
     }
 
     public function deletePost($id) {
         $post = self::getPost($id);
-        var_dump($post);
         if(!$post) {
             return false;
         }
         /*
         if($comment->id != null) {
-            var_dump($comment->id);
             deleteComment($comment->id);
         }*/
 
@@ -61,7 +94,6 @@ class PostsModel extends BaseModel {
 
     public function changeStatus($id, $status_id) {
         $post = self::getPost($id);
-        var_dump($post);
         if(!$post) {
             return false;
         }
@@ -86,5 +118,35 @@ class PostsModel extends BaseModel {
         $statement->bind_param("ii", $views, $id);
         $statement->execute();
         return $statement->affected_rows > 0;
+    }
+
+    public function getCategories() {
+        $statement = self::$db->query(
+            "SELECT * FROM categories ORDER BY id");
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getStatuses() {
+        $statement = self::$db->query(
+            "SELECT * FROM statuses ORDER BY id");
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getTags() {
+        $statement = self::$db->query(
+            "SELECT * FROM tags ORDER BY uses DESC");
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getPostTags($id) {
+        $statement = self::$db->query(
+            "SELECT * FROM tags t JOIN posts_tags pt ON t.id = pt.tag_id WHERE pt.post_id = $id");
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getPostComments($id) {
+        $statement = self::$db->query(
+            "SELECT * FROM comments WHERE post_id = $id");
+        return $statement->fetch_all(MYSQLI_ASSOC);
     }
 }

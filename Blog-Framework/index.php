@@ -6,7 +6,7 @@ define( 'DX_DS', '/' );
 define( 'DX_ROOT_DIR', dirname( __FILE__ ) . DX_DS );
 define( 'DX_ROOT_PATH', basename( dirname( __FILE__ ) ) . DX_DS );
 define( 'DX_ROOT_URL', 'http://' . $_SERVER['HTTP_HOST'] . DX_DS . 'blog/' );
-var_dump(DX_ROOT_URL);
+//var_dump(DX_ROOT_URL);
 // Define the request home that will always persist in REQUEST_URI
 $request_home = DX_DS . DX_ROOT_PATH;
 //$request_home = DX_ROOT_URL;
@@ -16,6 +16,7 @@ $requestParts = array();
 $controllerName = DEFAULT_CONTROLLER;
 $actionName = DEFAULT_ACTION;
 $params = array();
+/*
 echo 'Request Home';
 var_dump($request_home);
 echo 'request';
@@ -26,11 +27,12 @@ echo 'controllerName';
 var_dump($controllerName);
 echo 'Request Home';
 var_dump($params);
+*/
 if ( ! empty( $request ) ) {
     if( 0 === strpos( $request, $request_home ) ) {
         // Clean the request
         $request = substr( $request, strlen( $request_home ) );
-        var_dump($request);
+        //var_dump($request);
         // Switch to admin routing
         if( 0 === strpos( $request, 'admin' ) ) {
             $admin_routing = true;
@@ -42,7 +44,7 @@ if ( ! empty( $request ) ) {
         // Fetch the controller, method and params if any
         $requestParts = explode( DX_DS, $request, 3 );
         $requestParts = array_filter($requestParts);
-        var_dump($requestParts);
+        //var_dump($requestParts);
         // Get controller and such
         if ( 1 < count($requestParts) ) {
             list( $controllerName, $actionName ) = $requestParts;
@@ -52,7 +54,7 @@ if ( ! empty( $request ) ) {
             $controllerName = isset($requestParts[0]) ? $requestParts[0] : DEFAULT_CONTROLLER;
         }
 
-        var_dump($params);
+        //var_dump($params);
     }
 }
 

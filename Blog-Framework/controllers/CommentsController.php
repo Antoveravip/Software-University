@@ -9,34 +9,30 @@ class CommentsController extends BaseController {
     }
 
     public function index() {
-        if($this->isPost) {
-            if(isset($_POST['post_id']) && $_POST['post_id'] != null) {
-                $this->comments = $this->db->getAll($_POST['post_id']);
-            } else {
-                $this->addErrorMessage("Missing post id.");
-            }
-        }
-
-        $this->redirect('blog');
+        $this->redirect('posts');
     }
 
     public function create() {
         if ($this->isPost) {
-            $name = $_POST['author_name'];
-            if ($this->db->createAuthor($name)) {
-                $this->addInfoMessage("Author created.");
-                $this->redirect('authors');
+            $visitor = $_POST['author'];
+            $email = $_POST['email'];
+            $content = $_POST['content'];
+            $post_id = $_POST['post_id'];
+            if ($this->db->createComment($content, $visitor, $post_id, $email, $status_id = 1)) {
+                $this->addInfoMessage("Comment added.");
+                $this->redirect('posts', 'view', $post_id);
             } else {
-                $this->addErrorMessage("Error creating author.");
+                $this->addErrorMessage("Error adding comment.");
             }
         }
     }
 
     public function delete($id) {
-        if ($this->db->deleteAuthor($id)) {
-            $this->addInfoMessage("Author deleted.");
+        $this->authorize();
+        if ($this->db->deleteComment($id)) {
+            $this->addInfoMessage("Comments deleted.");
         } else {
-            $this->addErrorMessage("Cannot delete author.");
+            $this->addErrorMessage("Cannot delete comment.");
         }
         $this->redirect('authors');
     }
